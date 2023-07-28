@@ -1,0 +1,16 @@
+{
+	"editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+	"eslint.workingDirectories": [{ "pattern": "src/*" }],
+	"tailwindCSS.experimental.configFile": "./tailwind.config.cjs",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"tailwindCSS.includeLanguages": {
+		"svx": "html"
+	}
+}

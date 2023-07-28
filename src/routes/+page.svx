@@ -1,0 +1,59 @@
+---
+layout: basic
+---
+
+<script lang="ts">
+    import { Html5Brand, Css3AltBrand, ReactBrand } from 'svelte-awesome-icons'
+</script>
+
+# John Doe
+
+## About
+
+I am a software engineer with a passion for building products that make a difference. I have a strong background in web development and have worked on a variety of projects ranging from small websites to large enterprise applications. I am currently working as a full-stack developer at [Acme Inc](https://acme.com).
+
+## Experience
+
+### Full-Stack Developer at Acme Inc
+
+*2018 - Present*
+
+- Built a new web application using React, Node.js, and MongoDB
+- Implemented a new REST API using Express.js and MongoDB
+- Developed a new mobile app using React Native
+
+### Software Engineer at Foo Corp
+
+*2015 - 2018*
+
+- Developed a new web application using AngularJS, Node.js, and MongoDB
+- Implemented a new REST API using Express.js and MongoDB
+- Developed a new mobile app using React Native
+
+## Education
+
+### University of Foo
+
+*Bachelor of Science in Computer Science*
+
+*2011 - 2015*
+
+## Skills
+
+- <Html5Brand class="inline m-0 mr-2" /> HTML
+- <Css3AltBrand class="inline m-0 mr-2" /> CSS
+- <ReactBrand class="inline m-0 mr-2" /> React
+
+## Projects
+
+### [Foo App](https://foo.app)
+
+*2019*
+
+Foo App is a mobile app that helps you find the best restaurants in your area.
+
+### [Bar App](https://bar.app)
+
+*2018*
+
+Bar App is a mobile app that helps you find the best bars in your area.
