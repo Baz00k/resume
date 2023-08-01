@@ -1,59 +1,48 @@
 ---
-layout: basic
+layout: blue
 ---
 
 <script lang="ts">
-    import { Html5Brand, Css3AltBrand, ReactBrand } from 'svelte-awesome-icons'
+    import Icon from '@iconify/svelte';
 </script>
 
-# John Doe
+<div class="-mx-6 -mt-8 h-32 bg-gray-400/10 dark:bg-gray-100/10" />
 
-## About
+<img src="/profile.webp" class="aspect-square h-40 rounded-full mx-auto -mt-20 border" alt="Jakub Buzuk" />
 
-I am a software engineer with a passion for building products that make a difference. I have a strong background in web development and have worked on a variety of projects ranging from small websites to large enterprise applications. I am currently working as a full-stack developer at [Acme Inc](https://acme.com).
+---
 
-## Experience
+# Jakub Buzuk
 
-### Full-Stack Developer at Acme Inc
+---
 
-*2018 - Present*
+## O mnie:
 
-- Built a new web application using React, Node.js, and MongoDB
-- Implemented a new REST API using Express.js and MongoDB
-- Developed a new mobile app using React Native
+Młody, pełen energii student informatyki.
+Podchodzi z pasją i uwagą do wszystkiego co robi, sumienie wypełniając swoje obowiązki.
+Potrafi znaleźć sobie zadania lub trzymać się ustalonego harmonogramu.
+Lubi pracować zarówno w grupie jak i samodzielnie.
+Uwielbia uczyć się nowych rzeczy.
 
-### Software Engineer at Foo Corp
+## Technologie:
 
-*2015 - 2018*
+- <Icon icon="skill-icons:typescript" class="inline mr-2" /> TypeScript
+- <Icon icon="skill-icons:javascript" class="inline mr-2" /> JavaScript
+- <Icon icon="skill-icons:html" class="inline mr-2" /> HTML
+- <Icon icon="skill-icons:css" class="inline mr-2" /> CSS
+- <Icon icon="skill-icons:python-dark" class="inline mr-2" /> Python
+- <Icon icon="devicon:csharp" class="inline mr-2" /> C#
+- <Icon icon="devicon:vuejs" class="inline mr-2" /> Vue
+- <Icon icon="devicon:react" class="inline mr-2" /> React
+- <Icon icon="tabler:brand-react-native" class="inline mr-2" /> React Native
+- <Icon icon="skill-icons:svelte" class="inline mr-2" /> Svelte
+- <Icon icon="fa-brands:node-js" class="inline mr-2" /> Node.js
+- <Icon icon="skill-icons:git" class="inline mr-2" /> Git
+- <Icon icon="devicon:github" class="inline mr-2" /> GitHub
 
-- Developed a new web application using AngularJS, Node.js, and MongoDB
-- Implemented a new REST API using Express.js and MongoDB
-- Developed a new mobile app using React Native
+## Systemy operacyjne:
 
-## Education
-
-### University of Foo
-
-*Bachelor of Science in Computer Science*
-
-*2011 - 2015*
-
-## Skills
-
-- <Html5Brand class="inline m-0 mr-2" /> HTML
-- <Css3AltBrand class="inline m-0 mr-2" /> CSS
-- <ReactBrand class="inline m-0 mr-2" /> React
-
-## Projects
-
-### [Foo App](https://foo.app)
-
-*2019*
-
-Foo App is a mobile app that helps you find the best restaurants in your area.
-
-### [Bar App](https://bar.app)
-
-*2018*
-
-Bar App is a mobile app that helps you find the best bars in your area.
+- <Icon icon="fa6-brands:windows" class="inline mr-2" /> Windows
+- <Icon icon="fa6-brands:windows" class="inline mr-2" /> Windows Server
+- <Icon icon="mdi:arch" class="inline mr-2" /> Arch Linux
+- <Icon icon="logos:ubuntu" class="inline mr-2" /> Ubuntu

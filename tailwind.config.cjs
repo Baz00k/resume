@@ -48,6 +48,17 @@ const config = {
 						'font-family': 'Poppins, system-ui, sans-serif',
 						h1: {
 							'font-weight': '600',
+						},
+						ul: {
+							li: {
+								'&:hover': {
+									'transform': 'scale(1.05)',
+								},
+								'&>:first-child': {
+									'margin-top': '0',
+									'margin-bottom': '0',
+								},
+							}
 						}
 					},
 				},
