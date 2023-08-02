@@ -1,3 +1,3 @@
-# My personal reusme
+# My personal resume
 
 [buzuk.dev](https://buzuk.dev)
