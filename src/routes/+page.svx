@@ -5,6 +5,7 @@ layout: tokyo
 <script lang="ts">
     import Icon from '@iconify/svelte';
     import profile from '$lib/images/profile.webp';
+    import Contact from '$components/Contact.svelte';
 </script>
 
 <div class="-mx-6 -mt-8 h-32 bg-gray-400/10 dark:bg-gray-100/10" />
@@ -45,3 +46,12 @@ Uwielbia uczyć się nowych rzeczy.
 - <Icon icon="fa6-brands:windows" class="inline mr-2" /> Windows Server
 - <Icon icon="mdi:arch" class="inline mr-2" /> Arch Linux
 - <Icon icon="logos:ubuntu" class="inline mr-2" /> Ubuntu
+
+## Języki:
+
+- <Icon icon="twemoji-flag-for-flag-united-states" class="inline mr-2" /> Angielski (C2)
+- <Icon icon="twemoji-flag-for-flag-poland" class="inline mr-2" /> Polski (Native)
+
+## Kontakt:
+
+<Contact />
