@@ -1,5 +1,4 @@
 import typography from '@tailwindcss/typography';
-import colors from 'tailwindcss/colors';
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -8,46 +7,52 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				dark: '#0f172a'
+				dark: '#0f172a',
+				tokyo: {
+					light: '#f4f4f6',
+					night: '#1a1b26',
+					storm: '#24283b',
+				},
 			},
 			typography: {
-				blue: {
+				tokyo: {
 					css: {
-						'--tw-prose-body': colors.black[950],
-						'--tw-prose-headings': colors.black,
-						'--tw-prose-lead': colors.blue[900],
-						'--tw-prose-links': colors.blue[900],
-						'--tw-prose-bold': colors.blue[900],
-						'--tw-prose-counters': colors.blue[900],
-						'--tw-prose-bullets': colors.blue[200],
-						'--tw-prose-hr': colors.blue[200],
-						'--tw-prose-quotes': colors.blue[900],
-						'--tw-prose-quote-borders': colors.blue[200],
-						'--tw-prose-captions': colors.blue[500],
-						'--tw-prose-code': colors.blue[950],
-						'--tw-prose-pre-code': colors.blue[200],
-						'--tw-prose-pre-bg': colors.blue[800],
-						'--tw-prose-th-borders': colors.blue[300],
-						'--tw-prose-td-borders': colors.blue[200],
-						'--tw-prose-invert-body': colors.sky[50],
-						'--tw-prose-invert-headings': colors.white,
-						'--tw-prose-invert-lead': colors.blue[400],
-						'--tw-prose-invert-links': colors.white,
-						'--tw-prose-invert-bold': colors.white,
-						'--tw-prose-invert-counters': colors.blue[100],
-						'--tw-prose-invert-bullets': colors.blue[300],
-						'--tw-prose-invert-hr': colors.blue[900],
-						'--tw-prose-invert-quotes': colors.blue[100],
-						'--tw-prose-invert-quote-borders': colors.blue[700],
-						'--tw-prose-invert-captions': colors.blue[400],
-						'--tw-prose-invert-code': colors.white,
-						'--tw-prose-invert-pre-code': colors.blue[300],
-						'--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-						'--tw-prose-invert-th-borders': colors.blue[600],
-						'--tw-prose-invert-td-borders': colors.blue[700],
+						'--tw-prose-body': '#0f0f14',
+						'--tw-prose-headings': '#343b58',
+						'--tw-prose-lead': '#565a6e',
+						'--tw-prose-links': '#33635c',
+						'--tw-prose-bold': '#0f0f14',
+						'--tw-prose-counters': '#565a6e',
+						'--tw-prose-bullets': '#565a6e',
+						'--tw-prose-hr': '#343b58',
+						'--tw-prose-quotes': '#0f0f14',
+						'--tw-prose-quote-borders': '#9699a3',
+						'--tw-prose-captions': '#565a6e',
+						'--tw-prose-code': '#0f0f14',
+						'--tw-prose-pre-code': '#e0af68',
+						'--tw-prose-pre-bg': '#1a1b26',
+						'--tw-prose-th-borders': '#343b58',
+						'--tw-prose-td-borders': '#565a6e',
+						'--tw-prose-invert-body': '#b4f9f8',
+						'--tw-prose-invert-headings': '#d9fcfb',
+						'--tw-prose-invert-lead': '#c6faf9',
+						'--tw-prose-invert-links': '#73daca',
+						'--tw-prose-invert-bold': '#c6faf9',
+						'--tw-prose-invert-counters': '#c6faf9',
+						'--tw-prose-invert-bullets': '#c6faf9',
+						'--tw-prose-invert-hr': '#a9b1d6',
+						'--tw-prose-invert-quotes': '#c6faf9',
+						'--tw-prose-invert-quote-borders': '#565f89',
+						'--tw-prose-invert-captions': '#c6faf9',
+						'--tw-prose-invert-code': '#d9fcfb',
+						'--tw-prose-invert-pre-code': '#e0af68',
+						'--tw-prose-invert-pre-bg': '#343b58',
+						'--tw-prose-invert-th-borders': '#a9b1d6',
+						'--tw-prose-invert-td-borders': '#414868',
 						'font-family': 'Poppins, system-ui, sans-serif',
 						h1: {
-							'font-weight': '600',
+							'font-family': 'Raleway, system-ui, sans-serif',
+							'font-weight': '400',
 						},
 						ul: {
 							li: {

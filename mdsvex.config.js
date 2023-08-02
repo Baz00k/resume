@@ -11,7 +11,7 @@ const config = defineConfig({
 	rehypePlugins: [],
 	layout: {
 		basic: '/src/layouts/basic/basic.svelte',
-		blue: '/src/layouts/blue/blue.svelte',
+		tokyo: '/src/layouts/tokyo/tokyo.svelte',
 		_: '/src/layouts/basic/basic.svelte'
 	}
 });

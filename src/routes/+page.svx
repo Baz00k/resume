@@ -1,5 +1,5 @@
 ---
-layout: blue
+layout: tokyo
 ---
 
 <script lang="ts">
@@ -10,8 +10,6 @@ layout: blue
 <div class="-mx-6 -mt-8 h-32 bg-gray-400/10 dark:bg-gray-100/10" />
 
 <img src="{profile}" class="aspect-square h-40 rounded-full mx-auto -mt-20 border" alt="Jakub Buzuk" />
-
----
 
 # Jakub Buzuk
 
