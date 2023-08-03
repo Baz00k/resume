@@ -24,33 +24,92 @@ Potrafi znaleźć sobie zadania lub trzymać się ustalonego harmonogramu.
 Lubi pracować zarówno w grupie jak i samodzielnie.
 Uwielbia uczyć się nowych rzeczy.
 
-## Technologie:
+## Umiejętności:
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+<div>
+
+### Języki programowania:
 
 - <Icon icon="skill-icons:typescript" class="inline mr-2" /> TypeScript
 - <Icon icon="skill-icons:javascript" class="inline mr-2" /> JavaScript
+- <Icon icon="devicon:python" class="inline mr-2" /> Python
+- <Icon icon="devicon:csharp" class="inline mr-2" /> C#
+- <Icon icon="devicon:dart" class="inline mr-2" /> Dart
 - <Icon icon="skill-icons:html" class="inline mr-2" /> HTML
 - <Icon icon="skill-icons:css" class="inline mr-2" /> CSS
-- <Icon icon="skill-icons:python-dark" class="inline mr-2" /> Python
-- <Icon icon="devicon:csharp" class="inline mr-2" /> C#
+
+</div>
+<div>
+
+### Technologie:
+
 - <Icon icon="devicon:vuejs" class="inline mr-2" /> Vue
 - <Icon icon="devicon:react" class="inline mr-2" /> React
 - <Icon icon="tabler:brand-react-native" class="inline mr-2" /> React Native
+- <Icon icon="devicon:nextjs" class="inline mr-2" /> Next.js
 - <Icon icon="skill-icons:svelte" class="inline mr-2" /> Svelte
 - <Icon icon="fa-brands:node-js" class="inline mr-2" /> Node.js
 - <Icon icon="skill-icons:git" class="inline mr-2" /> Git
 - <Icon icon="devicon:github" class="inline mr-2" /> GitHub
+- <Icon icon="skill-icons:wordpress" class="inline mr-2" /> WordPress
+- <Icon icon="logos:firebase" class="inline mr-2" /> Firebase
+- <Icon icon="logos:unity" class="inline mr-2" /> Unity
 
-## Systemy operacyjne:
+</div>
+<div>
+
+### Systemy operacyjne:
 
 - <Icon icon="fa6-brands:windows" class="inline mr-2" /> Windows
 - <Icon icon="fa6-brands:windows" class="inline mr-2" /> Windows Server
 - <Icon icon="mdi:arch" class="inline mr-2" /> Arch Linux
 - <Icon icon="logos:ubuntu" class="inline mr-2" /> Ubuntu
 
+</div>
+<div>
+
+### Narzędzia:
+
+- <Icon icon="logos:visual-studio-code" class="inline mr-2" /> Visual Studio Code
+- <Icon icon="skill-icons:neovim-dark" class="inline mr-2" /> NeoVim
+- <Icon icon="logos:visual-studio" class="inline mr-2" /> Visual Studio
+- <Icon icon="skill-icons:bash-dark" class="inline mr-2" /> Bash
+- <Icon icon="skill-icons:photoshop" class="inline mr-2" /> Photoshop
+- <Icon icon="logos:figma" class="inline mr-2" /> Figma
+
+</div>
+</div>
+
 ## Języki:
 
-- <Icon icon="twemoji-flag-for-flag-united-states" class="inline mr-2" /> Angielski (C2)
 - <Icon icon="twemoji-flag-for-flag-poland" class="inline mr-2" /> Polski (Native)
+- <Icon icon="twemoji-flag-for-flag-united-states" class="inline mr-2" /> Angielski (C2)
+- <Icon icon="twemoji-flag-for-flag-germany" class="inline mr-2" /> Niemiecki (A1)
+
+## Doświadczenie:
+
+### Sharply
+**[sharplydone.com](https://sharplydone.com)**
+*Software Developer* (2022 - obecnie)
+
+Tworzenie aplikacji webowych w Vue.js i .Net.
+Aplikacje i gry webowe z wykorzystaniem canvas.
+
+Praca z innymi programistami w zespole w metodyce Agile.
+
+### julka.fit
+**[julka.fit](https://julka.fit)**
+*Freelance Full-Stack Developer* (2020 - obecnie)
+
+Stworzenie i utrzymanie strony internetowej wraz ze sklepem w Next.js, Amazon Lambda i Stripe.
+
+### Jacek & Lech, AS 4Property
+**[jaceklech.pl](https://jaceklech.pl)**
+*Administrator w małych firmach* (2021 - obecnie)
+
+Opieka nad usługą Office365, hostingami, DNS-ami i skrzynkami mailowymi dla dwóch małych firm zajmującymi się nieruchomościami.
+Ogólna pomoc w zakresie IT.
 
 ## Kontakt:
 
