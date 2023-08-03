@@ -57,7 +57,7 @@ const config = {
 						ul: {
 							li: {
 								'&:hover': {
-									'transform': 'scale(1.05)',
+									'transform': 'scale(1.1)',
 								},
 								'&>:first-child': {
 									'margin-top': '0',
