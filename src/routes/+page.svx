@@ -26,7 +26,7 @@ Uwielbia uczyć się nowych rzeczy.
 
 ## Umiejętności:
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+<div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-4">
 <div>
 
 ### Języki programowania:
@@ -65,6 +65,7 @@ Uwielbia uczyć się nowych rzeczy.
 - <Icon icon="fa6-brands:windows" class="inline mr-2" /> Windows Server
 - <Icon icon="mdi:arch" class="inline mr-2" /> Arch Linux
 - <Icon icon="logos:ubuntu" class="inline mr-2" /> Ubuntu
+- <Icon icon="fa6-brands:apple" class="inline mr-2" /> macOS
 
 </div>
 <div>
@@ -72,9 +73,9 @@ Uwielbia uczyć się nowych rzeczy.
 ### Narzędzia:
 
 - <Icon icon="logos:visual-studio-code" class="inline mr-2" /> Visual Studio Code
-- <Icon icon="skill-icons:neovim-dark" class="inline mr-2" /> NeoVim
+- <Icon icon="skill-icons:neovim-dark" class="inline mr-2" /> Neovim
 - <Icon icon="logos:visual-studio" class="inline mr-2" /> Visual Studio
-- <Icon icon="skill-icons:bash-dark" class="inline mr-2" /> Bash
+- <Icon icon="skill-icons:bash-dark" class="inline mr-2" /> Bash/Zsh
 - <Icon icon="skill-icons:photoshop" class="inline mr-2" /> Photoshop
 - <Icon icon="logos:figma" class="inline mr-2" /> Figma
 
@@ -93,7 +94,7 @@ Uwielbia uczyć się nowych rzeczy.
 **[sharplydone.com](https://sharplydone.com)**
 *Software Developer* (2022 - obecnie)
 
-Tworzenie aplikacji webowych w Vue.js i .Net.
+Tworzenie aplikacji webowych w Vue.js i .Net dla dużych firm.
 Aplikacje i gry webowe z wykorzystaniem canvas.
 
 Praca z innymi programistami w zespole w metodyce Agile.
@@ -106,9 +107,9 @@ Stworzenie i utrzymanie strony internetowej wraz ze sklepem w Next.js, Amazon La
 
 ### Jacek & Lech, AS 4Property
 **[jaceklech.pl](https://jaceklech.pl)**
-*Administrator w małych firmach* (2021 - obecnie)
+*Administrator* (2021 - obecnie)
 
-Opieka nad usługą Office365, hostingami, DNS-ami i skrzynkami mailowymi dla dwóch małych firm zajmującymi się nieruchomościami.
+Administracja usługi Office365, hostingów, DNS-ów i skrzynek mailowych dla dwóch małych firm zajmującymi się nieruchomościami.
 Ogólna pomoc w zakresie IT.
 
 ## Kontakt:
