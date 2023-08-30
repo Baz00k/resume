@@ -112,6 +112,45 @@ Stworzenie i utrzymanie strony internetowej wraz ze sklepem w Next.js, Amazon La
 Administracja usługi Office365, hostingów, DNS-ów i skrzynek mailowych dla dwóch małych firm zajmującymi się nieruchomościami.
 Ogólna pomoc w zakresie IT.
 
+---
+
+## Projekty
+
+### [Resume template](https://github.com/Baz00k/resume-template)
+
+Repozytorium będące szablonem do tworzenia CV za pomocą MarkDown'u.
+To CV zostało stworzone z wykorzystaniem tego szablonu.
+
+Wykorzystane technologie:
+- Svelte (SvelteKit)
+- TailwindCSS
+- TypeScript
+- MDsveX
+
+### [IdeaSphere](https://github.com/Baz00k/IdeaSphere)
+
+Aplikacja na telefony (Android/iOS) pozwalająca na przeglądanie i dodawanie pomysłów na spędzenie wolnego czasu.
+Pomysły są grupowane w kategorie i można je filtrować.
+
+Wykorzystane technologie:
+- React Native (Expo)
+- TypeScript
+- Supabase
+- Next.js
+- TailwindCSS
+- TRPC
+- Turborepo
+
+---
+
+## Edukacja:
+
+### Uniwersytet DSW we Wrocławiu
+**Informatyka** (2022 - obecnie)
+
+### Technikum Mechatroniczne nr 1 w Warszawie
+**Technik informatyk** (2018 - 2022)
+
 ## Kontakt:
 
 <Contact />
