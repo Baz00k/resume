@@ -9,8 +9,11 @@ export const exportToPDF = () => {
 
 	const { width, height } = resume.getBoundingClientRect();
 
+	const resumeWidth = Math.ceil(width);
+	const resumeHeight = Math.ceil(height * 1.005);
+
 	const style = document.createElement('style');
-	style.innerHTML = `@page { size: ${width}px ${height + 1}px; margin: 0; }`;
+	style.innerHTML = `@page { size: ${resumeWidth}px ${resumeHeight}px; margin: 0; }`;
 
 	document.head.appendChild(style);
 
