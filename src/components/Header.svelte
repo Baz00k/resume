@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
-	import { exportToPDF } from '$lib/exportToPDF';
+	import Icon from '@iconify/svelte'
+	import { exportToPDF } from '$lib/exportToPDF'
 </script>
 
 <header class="flex items-center justify-end p-3 md:px-6 w-full print:hidden">

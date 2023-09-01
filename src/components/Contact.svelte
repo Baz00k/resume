@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
+	import Icon from '@iconify/svelte'
 
 	interface ContactLink {
-		icon: string;
-		link: string;
-		linkText: string;
-		text: string;
+		icon: string
+		link: string
+		linkText: string
+		text: string
 	}
 
 	const contactLinks: ContactLink[] = [
@@ -27,7 +27,7 @@
 			link: 'https://github.com/Baz00k',
 			linkText: '@Baz00k'
 		}
-	];
+	]
 </script>
 
 {#each contactLinks as contactLink}

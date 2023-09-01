@@ -1,4 +1,4 @@
-import typography from '@tailwindcss/typography';
+import typography from '@tailwindcss/typography'
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -11,8 +11,8 @@ const config = {
 				tokyo: {
 					light: '#f4f4f6',
 					night: '#1a1b26',
-					storm: '#24283b',
-				},
+					storm: '#24283b'
+				}
 			},
 			typography: {
 				tokyo: {
@@ -52,27 +52,26 @@ const config = {
 						'font-family': 'Poppins, system-ui, sans-serif',
 						h1: {
 							'font-family': 'Raleway, system-ui, sans-serif',
-							'font-weight': '400',
+							'font-weight': '400'
 						},
 						ul: {
 							li: {
 								'&:hover': {
-									'transform': 'scale(1.1)',
+									transform: 'scale(1.1)'
 								},
 								'&>:first-child': {
 									'margin-top': '0',
-									'margin-bottom': '0',
-								},
+									'margin-bottom': '0'
+								}
 							}
 						}
-					},
-				},
-
+					}
+				}
 			}
 		}
 	},
 
 	plugins: [typography]
-};
+}
 
-module.exports = config;
+module.exports = config
