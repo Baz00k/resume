@@ -12,8 +12,8 @@
 		{
 			icon: 'mdi:email',
 			text: 'Email:',
-			link: 'mailto:gustav.buzuk@gmail.com',
-			linkText: 'gustav.buzuk@gmail.com'
+			link: 'mailto:jakub@buzuk.dev',
+			linkText: 'jakub@buzuk.dev'
 		},
 		{
 			icon: 'mdi:linkedin',
