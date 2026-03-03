@@ -1,0 +1,51 @@
+{
+	"format_on_save": "on",
+	"formatter": {
+		"external": {
+			"command": "prettier",
+			"arguments": ["--stdin-filepath", "{buffer_path}"]
+		}
+	},
+	"languages": {
+		"JavaScript": {
+			"formatter": [
+				{ "code_action": "source.fixAll.eslint" },
+				{
+					"external": {
+						"command": "prettier",
+						"arguments": ["--stdin-filepath", "{buffer_path}"]
+					}
+				}
+			]
+		},
+		"TypeScript": {
+			"formatter": [
+				{ "code_action": "source.fixAll.eslint" },
+				{
+					"external": {
+						"command": "prettier",
+						"arguments": ["--stdin-filepath", "{buffer_path}"]
+					}
+				}
+			]
+		},
+		"Svelte": {
+			"formatter": {
+				"external": {
+					"command": "prettier",
+					"arguments": ["--stdin-filepath", "{buffer_path}"]
+				}
+			}
+		}
+	},
+	"lsp": {
+		"tailwindcss-language-server": {
+			"settings": {
+				"includeLanguages": {
+					"svelte": "html",
+					"svx": "html"
+				}
+			}
+		}
+	}
+}
