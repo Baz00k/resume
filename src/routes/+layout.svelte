@@ -1,12 +1,12 @@
 <script lang="ts">
-	import '../app.postcss'
-	import Header from '$components/Header.svelte'
+	import '../app.css';
+	import Header from '$components/Header.svelte';
 </script>
 
 <Header />
 <main class="w-full px-2 py-4 print:p-0">
 	<div
-		class="rounded-lg bg-gray-50 dark:bg-gray-100/10 w-full h-full min-w-min max-w-[21cm] min-h-[29.7cm] mx-auto overflow-clip print:m-0 print:absolute print:top-0 print:left-0 print:rounded-none print:w-full"
+		class="mx-auto h-full min-h-[29.7cm] w-full min-w-min max-w-[21cm] overflow-clip rounded-lg bg-gray-50 dark:bg-gray-100/10 print:absolute print:left-0 print:top-0 print:m-0 print:w-full print:rounded-none"
 		id="resume"
 	>
 		<slot />

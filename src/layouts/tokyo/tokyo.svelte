@@ -1,5 +1,5 @@
 <div
-	class="prose dark:prose-invert prose-tokyo px-6 py-8 max-w-full min-h-full bg-tokyo-light dark:bg-tokyo-storm prose-h1:text-center prose-h2:underline prose-headings:font-medium prose-h1:text-[3rem] prose-headings:underline-offset-4 prose-headings:decoration-2 prose-ul:flex prose-ul:flex-wrap prose-ul:gap-x-3 prose-ul:list-none prose-ul:max-w-[40rem] prose-li:bg-gray-400/10 hover:prose-li:bg-gray-400/20 dark:prose-li:bg-gray-100/10 dark:hover:prose-li:bg-gray-100/20 prose-li:rounded prose-li:py-1 prose-li:px-2 prose-li:text-sm prose-li:transition-all"
+	class="prose prose-tokyo max-w-full bg-tokyo-light p-6 dark:prose-invert prose-headings:font-medium prose-headings:decoration-4 prose-headings:underline-offset-4 prose-h1:text-center prose-h1:text-[3rem] prose-h2:underline prose-ul:flex prose-ul:max-w-[40rem] prose-ul:list-none prose-ul:flex-wrap prose-ul:gap-x-3 prose-li:rounded prose-li:bg-gray-400/10 prose-li:px-2 prose-li:py-1 prose-li:text-sm prose-li:transition-all hover:prose-li:bg-gray-400/20 md:px-8 md:py-10 dark:bg-tokyo-storm dark:prose-li:bg-gray-100/10 dark:hover:prose-li:bg-gray-100/20"
 >
 	<slot />
 </div>

@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const tailwindcss = require('tailwindcss')
-const autoprefixer = require('autoprefixer')
+/* eslint-disable @typescript-eslint/no-require-imports */
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
 const config = {
 	plugins: [
@@ -9,6 +9,6 @@ const config = {
 		//But others, like autoprefixer, need to run after,
 		autoprefixer
 	]
-}
+};
 
-module.exports = config
+module.exports = config;

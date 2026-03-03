@@ -1,8 +1,10 @@
-import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts,md,svx}'],
+	content: ['./src/**/*.{html,js,svelte,ts,md,mdx,svx}'],
+	safelist: ['iconify'],
 
 	theme: {
 		extend: {
@@ -53,17 +55,6 @@ const config = {
 						h1: {
 							'font-family': 'Raleway, system-ui, sans-serif',
 							'font-weight': '400'
-						},
-						ul: {
-							li: {
-								'&:hover': {
-									transform: 'scale(1.1)'
-								},
-								'&>:first-child': {
-									'margin-top': '0',
-									'margin-bottom': '0'
-								}
-							}
 						}
 					}
 				}
@@ -71,7 +62,7 @@ const config = {
 		}
 	},
 
-	plugins: [typography]
-}
+	plugins: [typography, forms]
+};
 
-module.exports = config
+module.exports = config;

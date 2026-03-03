@@ -1,0 +1,158 @@
+---
+layout: tokyo
+---
+
+<script lang="ts">
+	import Icon from '@iconify/svelte'; import * as m from '$lib/translations/messages'; import
+	profile from '$lib/images/profile.webp'; import Contact from '$components/Contact.svelte';
+</script>
+
+<div class="-mx-6 -mt-8 h-32 bg-gray-400/10 dark:bg-gray-100/10" />
+
+<img
+	src="{profile}"
+	class="mx-auto -mt-20 aspect-square h-40 rounded-full border"
+	alt={m.profile_alt()}
+/>
+
+# {m.full_name()}
+
+---
+
+## {m.section_about()}
+
+{m.about_text()}
+
+## {m.section_skills()}
+
+<div class="grid grid-cols-1 gap-x-4 md:grid-cols-2 print:grid-cols-2">
+<div>
+
+### {m.subsection_programming_languages()}
+
+- <Icon icon="skill-icons:typescript" class="mr-2 inline" /> TypeScript
+- <Icon icon="skill-icons:javascript" class="mr-2 inline" /> JavaScript
+- <Icon icon="devicon:python" class="mr-2 inline" /> Python
+- <Icon icon="devicon:csharp" class="mr-2 inline" /> C#
+- <Icon icon="devicon:dart" class="mr-2 inline" /> Dart
+- <Icon icon="skill-icons:html" class="mr-2 inline" /> HTML
+- <Icon icon="skill-icons:css" class="mr-2 inline" /> CSS
+
+</div>
+<div>
+
+### {m.subsection_technologies()}
+
+- <Icon icon="devicon:vuejs" class="mr-2 inline" /> Vue
+- <Icon icon="devicon:react" class="mr-2 inline" /> React
+- <Icon icon="tabler:brand-react-native" class="mr-2 inline" /> React Native
+- <Icon icon="devicon:nextjs" class="mr-2 inline" /> Next.js
+- <Icon icon="skill-icons:svelte" class="mr-2 inline" /> Svelte
+- <Icon icon="fa-brands:node-js" class="mr-2 inline" /> Node.js
+- <Icon icon="skill-icons:git" class="mr-2 inline" /> Git
+- <Icon icon="devicon:github" class="mr-2 inline" /> GitHub
+- <Icon icon="skill-icons:wordpress" class="mr-2 inline" /> WordPress
+- <Icon icon="logos:firebase" class="mr-2 inline" /> Firebase
+- <Icon icon="logos:unity" class="mr-2 inline" /> Unity
+
+</div>
+<div>
+
+### {m.subsection_operating_systems()}
+
+- <Icon icon="fa6-brands:windows" class="mr-2 inline" /> Windows
+- <Icon icon="fa6-brands:windows" class="mr-2 inline" /> Windows Server
+- <Icon icon="mdi:arch" class="mr-2 inline" /> Arch Linux
+- <Icon icon="logos:ubuntu" class="mr-2 inline" /> Ubuntu
+- <Icon icon="fa6-brands:apple" class="mr-2 inline" /> macOS
+
+</div>
+<div>
+
+### {m.subsection_tools()}
+
+- <Icon icon="logos:visual-studio-code" class="mr-2 inline" /> Visual Studio Code
+- <Icon icon="skill-icons:neovim-dark" class="mr-2 inline" /> Neovim
+- <Icon icon="logos:visual-studio" class="mr-2 inline" /> Visual Studio
+- <Icon icon="skill-icons:bash-dark" class="mr-2 inline" /> Bash/Zsh
+- <Icon icon="skill-icons:photoshop" class="mr-2 inline" /> Photoshop
+- <Icon icon="logos:figma" class="mr-2 inline" /> Figma
+
+</div>
+</div>
+
+## {m.section_languages()}
+
+- <Icon icon="twemoji-flag-for-flag-poland" class="mr-2 inline" /> {m.lang_polish()}
+- <Icon icon="twemoji-flag-for-flag-united-states" class="mr-2 inline" /> {m.lang_english()}
+- <Icon icon="twemoji-flag-for-flag-germany" class="mr-2 inline" /> {m.lang_german()}
+
+## {m.section_experience()}
+
+### Sharply
+
+**[sharplydone.com](https://sharplydone.com)**
+_{m.exp_sharply_role()}_ ({m.exp_sharply_period()})
+
+{m.exp_sharply_desc()}
+
+{m.exp_sharply_desc2()}
+
+### julka.fit
+
+**[julka.fit](https://julka.fit)**
+_{m.exp_julkafit_role()}_ ({m.exp_julkafit_period()})
+
+{m.exp_julkafit_desc()}
+
+### Jacek & Lech, AS 4Property
+
+**[jaceklech.pl](https://jaceklech.pl)**
+_{m.exp_admin_role()}_ ({m.exp_admin_period()})
+
+{m.exp_admin_desc()}
+
+---
+
+## {m.section_projects()}
+
+### [Resume template](https://github.com/Baz00k/resume-template)
+
+{m.project_resume_desc()}
+
+{m.project_technologies_used()}
+
+- Svelte (SvelteKit)
+- TailwindCSS
+- TypeScript
+- MDsveX
+
+### [IdeaSphere](https://github.com/Baz00k/IdeaSphere)
+
+{m.project_ideasphere_desc()}
+
+{m.project_technologies_used()}
+
+- React Native (Expo)
+- TypeScript
+- Supabase
+- Next.js
+- TailwindCSS
+- TRPC
+- Turborepo
+
+---
+
+## {m.section_education()}
+
+### {m.edu_dsw()}
+
+**{m.edu_dsw_field()}** ({m.edu_dsw_period()})
+
+### {m.edu_technikum()}
+
+**{m.edu_technikum_field()}** ({m.edu_technikum_period()})
+
+## {m.section_contact()}
+
+<Contact />
