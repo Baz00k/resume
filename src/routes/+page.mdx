@@ -43,14 +43,20 @@ layout: tokyo
 
 ### {m.subsection_technologies()}
 
-- <Icon icon="devicon:vuejs" class="mr-2 inline" /> Vue
 - <Icon icon="devicon:react" class="mr-2 inline" /> React
+- <Icon icon="devicon:vuejs" class="mr-2 inline" /> Vue
 - <Icon icon="tabler:brand-react-native" class="mr-2 inline" /> React Native
 - <Icon icon="devicon:nextjs" class="mr-2 inline" /> Next.js
 - <Icon icon="skill-icons:svelte" class="mr-2 inline" /> Svelte
 - <Icon icon="fa-brands:node-js" class="mr-2 inline" /> Node.js
 - <Icon icon="skill-icons:git" class="mr-2 inline" /> Git
 - <Icon icon="devicon:github" class="mr-2 inline" /> GitHub
+- <Icon icon="skill-icons:docker" class="mr-2 inline" /> Docker
+- <Icon icon="devicon:traefikproxy" class="mr-2 inline" /> Traefik
+- <Icon icon="simple-icons:tailscale" class="mr-2 inline" /> Tailscale
+- <Icon icon="mdi:home-assistant" class="mr-2 inline" /> Home Assistant
+- <Icon icon="simple-icons:esphome" class="mr-2 inline" /> ESPHome
+- <Icon icon="simple-icons:proxmox" class="mr-2 inline" /> Proxmox
 - <Icon icon="skill-icons:wordpress" class="mr-2 inline" /> WordPress
 - <Icon icon="logos:firebase" class="mr-2 inline" /> Firebase
 - <Icon icon="logos:unity" class="mr-2 inline" /> Unity
@@ -62,8 +68,7 @@ layout: tokyo
 
 - <Icon icon="fa6-brands:windows" class="mr-2 inline" /> Windows
 - <Icon icon="fa6-brands:windows" class="mr-2 inline" /> Windows Server
-- <Icon icon="mdi:arch" class="mr-2 inline" /> Arch Linux
-- <Icon icon="logos:ubuntu" class="mr-2 inline" /> Ubuntu
+- <Icon icon="fa6-brands:linux" class="mr-2 inline" /> Linux (Debian, Ubuntu, Arch)
 - <Icon icon="fa6-brands:apple" class="mr-2 inline" /> macOS
 
 </div>
@@ -74,6 +79,7 @@ layout: tokyo
 - <Icon icon="logos:visual-studio-code" class="mr-2 inline" /> Visual Studio Code
 - <Icon icon="skill-icons:neovim-dark" class="mr-2 inline" /> Neovim
 - <Icon icon="logos:visual-studio" class="mr-2 inline" /> Visual Studio
+- <Icon icon="simple-icons:zedindustries" class="mr-2 inline" /> Zed
 - <Icon icon="skill-icons:bash-dark" class="mr-2 inline" /> Bash/Zsh
 - <Icon icon="skill-icons:photoshop" class="mr-2 inline" /> Photoshop
 - <Icon icon="logos:figma" class="mr-2 inline" /> Figma
@@ -89,9 +95,9 @@ layout: tokyo
 
 ## {m.section_experience()}
 
-### Sharply
+### SoftIQ (dawniej Sharply)
 
-**[sharplydone.com](https://sharplydone.com)**
+**[softiq.pl](https://softiq.pl)**
 _{m.exp_sharply_role()}_ ({m.exp_sharply_period()})
 
 {m.exp_sharply_desc()}
@@ -100,7 +106,7 @@ _{m.exp_sharply_role()}_ ({m.exp_sharply_period()})
 
 ### julka.fit
 
-**[julka.fit](https://julka.fit)**
+**[julkamigdalska.pl](https://www.julkamigdalska.pl/)**
 _{m.exp_julkafit_role()}_ ({m.exp_julkafit_period()})
 
 {m.exp_julkafit_desc()}
@@ -116,6 +122,42 @@ _{m.exp_admin_role()}_ ({m.exp_admin_period()})
 
 ## {m.section_projects()}
 
+### [Jot CLI](https://github.com/Baz00k/jot-cli)
+
+{m.project_jotcli_desc()}
+
+{m.project_technologies_used()}
+
+- TypeScript
+- Bun
+- Effect
+- React
+- OpenTUI
+
+### Homelab
+
+{m.project_homelab_desc()}
+
+{m.project_technologies_used()}
+
+- Proxmox
+- TrueNAS
+- Docker
+- Traefik
+- Tailscale
+- Cloudflare Tunnel
+
+### [Hydro Homie](https://github.com/Baz00k/hydro-homie)
+
+{m.project_hydrohomie_desc()}
+
+{m.project_technologies_used()}
+
+- ESPHome
+- ESP32-C6
+- atopile
+- Home Assistant
+
 ### [Resume template](https://github.com/Baz00k/resume-template)
 
 {m.project_resume_desc()}
@@ -127,19 +169,9 @@ _{m.exp_admin_role()}_ ({m.exp_admin_period()})
 - TypeScript
 - MDsveX
 
-### [IdeaSphere](https://github.com/Baz00k/IdeaSphere)
+### {m.section_oss()}
 
-{m.project_ideasphere_desc()}
-
-{m.project_technologies_used()}
-
-- React Native (Expo)
-- TypeScript
-- Supabase
-- Next.js
-- TailwindCSS
-- TRPC
-- Turborepo
+{m.oss_desc()}
 
 ---
 
