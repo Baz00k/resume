@@ -1,7 +1,15 @@
 <script lang="ts">
 	import '../app.css';
 	import Header from '$components/Header.svelte';
+	import { localizeHref, locales } from '$lib/translations/runtime';
 </script>
+
+<svelte:head>
+	<!-- Hidden links for prerendering all locale variants -->
+	{#each locales as locale}
+		<link rel="alternate" hreflang={locale} href={localizeHref('/', { locale })} />
+	{/each}
+</svelte:head>
 
 <Header />
 <main class="w-full px-2 py-4 print:p-0">
