@@ -1,7 +1,5 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"full_name": "Jakub Buzuk",
-	"profile_alt": "Jakub Buzuk",
 	"section_about": "O mnie:",
 	"about_text": "Inżynier informatyki i Full Stack Developer z doświadczeniem komercyjnym od 2020 roku. Na co dzień tworzę aplikacje webowe w TypeScript, React i C#, ale po godzinach lubię wykraczać poza web — buduję własny homelab z dziesiątkami serwisów, tworzę Smart Home (w tym własne urządzenia IoT) i kontrybuuję do projektów open source. Interesuję się AI — hostuję lokalne modele LLM, korzystam z i tworzę agentów. Pasjonuję się automatyzacją, małymi pojazdami elektrycznymi i FPV. Szybko się uczę, cenię dobrze napisany kod i nie boję się nowych technologii.",
 	"section_skills": "Umiejętności:",
@@ -14,6 +12,7 @@
 	"lang_english": "Angielski (C2)",
 	"lang_german": "Niemiecki (A1)",
 	"section_experience": "Doświadczenie:",
+	"exp_sharply_name": "SoftIQ (dawniej Sharply)",
 	"exp_sharply_role": "Software Developer",
 	"exp_sharply_period": "2022 - obecnie",
 	"exp_sharply_desc": "Tworzenie aplikacji webowych w React, Vue i .NET dla dużych i małych firm. Od dashboardów i formularzy, przez zaawansowane konfiguratory 2D i 3D z wykorzystaniem canvas aż po gry webowe. Praca w zespole programistów w metodyce Agile.",
