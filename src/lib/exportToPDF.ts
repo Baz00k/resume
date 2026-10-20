@@ -1,4 +1,4 @@
-import { browserType, getBrowserInfo } from '$lib/browserInfo';
+import { browserType, getBrowserInfo } from '#lib/browserInfo.ts';
 
 export const exportToPDF = (element: Element) => {
 	const style = document.createElement('style');

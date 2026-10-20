@@ -1,8 +1,9 @@
 {
-	"extends": ["@total-typescript/tsconfig/tsc/dom/app", "./.svelte-kit/tsconfig.json"],
+	"extends": "$app/tsconfig",
 	"compilerOptions": {
-		"moduleResolution": "Bundler",
-		"tsBuildInfoFile": "./.svelte-kit/build/tsc.json"
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"resolveJsonModule": true
 	},
-	"exclude": ["node_modules", "cache"]
+	"include": ["src", "vite.config.ts"]
 }
