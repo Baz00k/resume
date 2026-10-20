@@ -5,6 +5,11 @@ export interface BreakOptions {
 	breakBefore?: boolean;
 }
 
+export interface Block extends BreakOptions {
+	/** Gap above the block, dropped at the top of a sheet. */
+	space?: 'tight' | 'item' | 'section';
+}
+
 /** Per-sheet result that Paginator publishes in `data-pagination` for scripts/pdf.ts. */
 export interface SheetReport {
 	/** Share of the sheet's content height in use, 0–1. */

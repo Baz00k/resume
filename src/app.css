@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
 /* The theme toggle sets `data-theme` on <html>; see the inline script in app.html. */
@@ -13,12 +12,10 @@
 	--font-body: Poppins, system-ui, sans-serif;
 	--font-display: Raleway, system-ui, sans-serif;
 	--color-dark: #0f172a;
-	--color-tokyo-light: #f4f4f6;
-	--color-tokyo-night: #1a1b26;
 	--color-tokyo-storm: #24283b;
 }
 
-/* Theme-aware colors used by the print layout, switched by `data-theme` below. */
+/* Theme-aware resume colors, switched by `data-theme` below. */
 @theme inline {
 	--color-paper: var(--paper);
 	--color-ink: var(--ink);
@@ -47,57 +44,18 @@
 	--chip: rgb(243 244 246 / 0.1);
 }
 
-/* Tokyo Night inspired typography theme, used as `prose-tokyo`. */
-@utility prose-tokyo {
-	--tw-prose-body: #0f0f14;
-	--tw-prose-headings: #343b58;
-	--tw-prose-lead: #565a6e;
-	--tw-prose-links: #33635c;
-	--tw-prose-bold: #0f0f14;
-	--tw-prose-counters: #565a6e;
-	--tw-prose-bullets: #565a6e;
-	--tw-prose-hr: #343b58;
-	--tw-prose-quotes: #0f0f14;
-	--tw-prose-quote-borders: #9699a3;
-	--tw-prose-captions: #565a6e;
-	--tw-prose-code: #0f0f14;
-	--tw-prose-pre-code: #e0af68;
-	--tw-prose-pre-bg: #1a1b26;
-	--tw-prose-th-borders: #343b58;
-	--tw-prose-td-borders: #565a6e;
-	--tw-prose-invert-body: #b4f9f8;
-	--tw-prose-invert-headings: #d9fcfb;
-	--tw-prose-invert-lead: #c6faf9;
-	--tw-prose-invert-links: #73daca;
-	--tw-prose-invert-bold: #c6faf9;
-	--tw-prose-invert-counters: #c6faf9;
-	--tw-prose-invert-bullets: #c6faf9;
-	--tw-prose-invert-hr: #a9b1d6;
-	--tw-prose-invert-quotes: #c6faf9;
-	--tw-prose-invert-quote-borders: #565f89;
-	--tw-prose-invert-captions: #c6faf9;
-	--tw-prose-invert-code: #d9fcfb;
-	--tw-prose-invert-pre-code: #e0af68;
-	--tw-prose-invert-pre-bg: #343b58;
-	--tw-prose-invert-th-borders: #a9b1d6;
-	--tw-prose-invert-td-borders: #414868;
+/* The sheet the resume is laid out on, shared by the web page and the PDF sheets. */
+@utility paper {
+	background-color: var(--paper);
+	color: var(--ink);
 	font-family: var(--font-body);
-
-	& h1 {
-		font-family: var(--font-display);
-		font-weight: 400;
-	}
+	font-size: 9.5pt;
+	line-height: 1.45;
 }
 
 @media print {
 	body {
 		print-color-adjust: exact;
-	}
-
-	#resume,
-	pre,
-	blockquote {
-		break-inside: avoid;
 	}
 }
 

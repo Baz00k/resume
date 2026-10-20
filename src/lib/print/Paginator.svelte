@@ -4,12 +4,15 @@
 	`data-pagination` on the root lists each sheet's fill and overflow for scripts/pdf.ts.
 -->
 <script lang="ts" module>
-	import type { BreakOptions } from './paginate.ts';
+	import type { Block } from './paginate.ts';
 
-	export interface Block extends BreakOptions {
-		/** Gap above the block, dropped at the top of a sheet. */
-		space?: 'tight' | 'item' | 'section';
-	}
+	const spaceClass = { tight: 'mt-[1.5mm]', item: 'mt-[3.5mm]', section: 'mt-[6mm]' };
+
+	/** Wrapper classes for a block; also used by the web page so both space blocks alike. */
+	export const blockClass = (block: Block) => [
+		'flow-root first:mt-0',
+		block.space && spaceClass[block.space]
+	];
 </script>
 
 <script lang="ts" generics="T extends Block">
@@ -23,8 +26,6 @@
 	}
 
 	let { blocks, block, footer }: Props = $props();
-
-	const spaceClass = { tight: 'mt-[1.5mm]', item: 'mt-[3.5mm]', section: 'mt-[6mm]' };
 
 	let measure = $state<HTMLElement>();
 	let contents = $state<HTMLElement[]>([]);
@@ -76,7 +77,7 @@
 
 {#snippet sheet(content: Snippet, page?: number, total?: number)}
 	<section
-		class="flex h-[297mm] w-[210mm] shrink-0 flex-col overflow-hidden bg-paper px-[14mm] pt-[12mm] pb-[7mm] font-body text-[9.5pt]/[1.45] text-ink shadow-xl not-last:break-after-page print:shadow-none"
+		class="flex h-[297mm] w-[210mm] shrink-0 flex-col overflow-hidden paper px-[14mm] pt-[12mm] pb-[7mm] shadow-xl not-last:break-after-page print:shadow-none"
 	>
 		{@render content()}
 		<footer class="mt-[3mm] flex h-[4mm] items-end justify-end text-[7.5pt] text-muted">
@@ -94,10 +95,10 @@
 	{#if pages}
 		{#each pages as page, p (p)}
 			{#snippet content()}
-				<div class="flex min-h-0 flex-1 flex-col" bind:this={contents[p]}>
+				<div class="@container flex min-h-0 flex-1 flex-col" bind:this={contents[p]}>
 					{#each page as index (index)}
 						{@const item = blocks[index]!}
-						<div class={['flow-root first:mt-0', item.space && spaceClass[item.space]]}>
+						<div class={blockClass(item)}>
 							{@render block(item)}
 						</div>
 					{/each}
@@ -107,9 +108,13 @@
 		{/each}
 	{:else}
 		{#snippet content()}
-			<div class="invisible flex min-h-0 flex-1 flex-col" bind:this={measure} aria-hidden="true">
+			<div
+				class="@container invisible flex min-h-0 flex-1 flex-col"
+				bind:this={measure}
+				aria-hidden="true"
+			>
 				{#each blocks as item, index (index)}
-					<div class={['flow-root first:mt-0', item.space && spaceClass[item.space]]}>
+					<div class={blockClass(item)}>
 						{@render block(item)}
 					</div>
 				{/each}
