@@ -15,6 +15,16 @@
 		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
 		<title>Jakub Buzuk</title>
 		<meta name="description" content="Jakub Buzuk's resume" />
+		<script>
+			// Apply the saved theme, or the system one, before first paint.
+			try {
+				document.documentElement.dataset.theme =
+					localStorage.getItem('theme') ??
+					(matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+			} catch {
+				document.documentElement.dataset.theme = 'light';
+			}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body

@@ -5,5 +5,5 @@
 		"noUncheckedIndexedAccess": true,
 		"resolveJsonModule": true
 	},
-	"include": ["src", "vite.config.ts"]
+	"include": ["src", "scripts", "vite.config.ts"]
 }

@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install Chromium for PDF rendering
+        run: pnpm exec playwright install --with-deps --only-shell chromium
+
       - name: Build
         run: pnpm run build
 

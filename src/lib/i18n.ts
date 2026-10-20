@@ -19,3 +19,7 @@ export const localeFromParam = (lang: string | undefined): Locale =>
 export const localeParam = (locale: Locale) => (locale === baseLocale ? undefined : locale);
 
 export const getMessages = (locale: Locale): Messages => dictionaries[locale];
+
+/** Prerender entries for `[[lang=lang]]` routes; the base locale at `/` is found by the crawler. */
+export const localeEntries = () =>
+	locales.filter((locale) => locale !== baseLocale).map((lang) => ({ lang }));

@@ -2,15 +2,49 @@
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+/* The theme toggle sets `data-theme` on <html>; see the inline script in app.html. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
 @theme {
 	/* Tailwind 3 default: the OS UI font, used by the header controls. */
 	--font-sans:
 		ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
 		'Noto Color Emoji';
+	--font-body: Poppins, system-ui, sans-serif;
+	--font-display: Raleway, system-ui, sans-serif;
 	--color-dark: #0f172a;
 	--color-tokyo-light: #f4f4f6;
 	--color-tokyo-night: #1a1b26;
 	--color-tokyo-storm: #24283b;
+}
+
+/* Theme-aware colors used by the print layout, switched by `data-theme` below. */
+@theme inline {
+	--color-paper: var(--paper);
+	--color-ink: var(--ink);
+	--color-heading: var(--heading);
+	--color-muted: var(--muted);
+	--color-accent: var(--accent);
+	--color-chip: var(--chip);
+}
+
+:root {
+	--paper: #ffffff;
+	--ink: #0f0f14;
+	--heading: #343b58;
+	--muted: #565a6e;
+	--accent: #33635c;
+	--chip: rgb(156 163 175 / 0.14);
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--paper: var(--color-tokyo-storm);
+	--ink: #b4f9f8;
+	--heading: #d9fcfb;
+	--muted: #a9b1d6;
+	--accent: #73daca;
+	--chip: rgb(243 244 246 / 0.1);
 }
 
 /* Tokyo Night inspired typography theme, used as `prose-tokyo`. */
@@ -47,10 +81,10 @@
 	--tw-prose-invert-pre-bg: #343b58;
 	--tw-prose-invert-th-borders: #a9b1d6;
 	--tw-prose-invert-td-borders: #414868;
-	font-family: Poppins, system-ui, sans-serif;
+	font-family: var(--font-body);
 
 	& h1 {
-		font-family: Raleway, system-ui, sans-serif;
+		font-family: var(--font-display);
 		font-weight: 400;
 	}
 }

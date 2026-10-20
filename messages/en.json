@@ -1,4 +1,5 @@
 {
+	"headline": "Full Stack Developer",
 	"sections": {
 		"about": "About me:",
 		"skills": "Skills:",
@@ -76,5 +77,10 @@
 		"polish": "Polish (Native)",
 		"english": "English (C2)",
 		"german": "German (A1)"
+	},
+	"ui": {
+		"switchToDark": "Switch to dark theme",
+		"switchToLight": "Switch to light theme",
+		"downloadPdf": "Download CV as PDF"
 	}
 }
