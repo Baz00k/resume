@@ -1,6 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+
+@theme {
+	/* Tailwind 3 default: the OS UI font, used by the header controls. */
+	--font-sans:
+		ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
+	--color-dark: #0f172a;
+	--color-tokyo-light: #f4f4f6;
+	--color-tokyo-night: #1a1b26;
+	--color-tokyo-storm: #24283b;
+}
+
+/* Tokyo Night inspired typography theme, used as `prose-tokyo`. */
+@utility prose-tokyo {
+	--tw-prose-body: #0f0f14;
+	--tw-prose-headings: #343b58;
+	--tw-prose-lead: #565a6e;
+	--tw-prose-links: #33635c;
+	--tw-prose-bold: #0f0f14;
+	--tw-prose-counters: #565a6e;
+	--tw-prose-bullets: #565a6e;
+	--tw-prose-hr: #343b58;
+	--tw-prose-quotes: #0f0f14;
+	--tw-prose-quote-borders: #9699a3;
+	--tw-prose-captions: #565a6e;
+	--tw-prose-code: #0f0f14;
+	--tw-prose-pre-code: #e0af68;
+	--tw-prose-pre-bg: #1a1b26;
+	--tw-prose-th-borders: #343b58;
+	--tw-prose-td-borders: #565a6e;
+	--tw-prose-invert-body: #b4f9f8;
+	--tw-prose-invert-headings: #d9fcfb;
+	--tw-prose-invert-lead: #c6faf9;
+	--tw-prose-invert-links: #73daca;
+	--tw-prose-invert-bold: #c6faf9;
+	--tw-prose-invert-counters: #c6faf9;
+	--tw-prose-invert-bullets: #c6faf9;
+	--tw-prose-invert-hr: #a9b1d6;
+	--tw-prose-invert-quotes: #c6faf9;
+	--tw-prose-invert-quote-borders: #565f89;
+	--tw-prose-invert-captions: #c6faf9;
+	--tw-prose-invert-code: #d9fcfb;
+	--tw-prose-invert-pre-code: #e0af68;
+	--tw-prose-invert-pre-bg: #343b58;
+	--tw-prose-invert-th-borders: #a9b1d6;
+	--tw-prose-invert-td-borders: #414868;
+	font-family: Poppins, system-ui, sans-serif;
+
+	& h1 {
+		font-family: Raleway, system-ui, sans-serif;
+		font-weight: 400;
+	}
+}
 
 @media print {
 	body {
@@ -10,7 +63,7 @@
 	#resume,
 	pre,
 	blockquote {
-		page-break-inside: avoid;
+		break-inside: avoid;
 	}
 }
 

@@ -1,14 +1,10 @@
-import type { Handle } from '@sveltejs/kit';
-import { paraglideMiddleware } from '$lib/translations/server';
+import type { Handle } from '@sveltejs/kit/hooks';
+import { localeFromParam } from '#lib/i18n.ts';
 
 export const handle: Handle = ({ event, resolve }) => {
-	return paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
-		event.request = localizedRequest;
-		event.locals.paraglide = { lang: locale, textDirection: 'ltr' };
-		return resolve(event, {
-			transformPageChunk: ({ html }) => {
-				return html.replace('%paraglide.lang%', locale).replace('%paraglide.textDirection%', 'ltr');
-			}
-		});
+	const locale = localeFromParam(event.params.lang);
+
+	return resolve(event, {
+		transformPageChunk: ({ html }) => html.replace('%lang%', locale)
 	});
 };

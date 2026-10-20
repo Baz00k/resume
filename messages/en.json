@@ -1,0 +1,80 @@
+{
+	"sections": {
+		"about": "About me:",
+		"skills": "Skills:",
+		"experience": "Experience:",
+		"projects": "Projects",
+		"openSource": "Open Source:",
+		"education": "Education:",
+		"languages": "Languages:",
+		"contact": "Contact:"
+	},
+	"skillGroups": {
+		"programmingLanguages": "Programming languages:",
+		"technologies": "Technologies:",
+		"operatingSystems": "Operating systems:",
+		"tools": "Tools:"
+	},
+	"about": "Computer Science engineer and Full Stack Developer with commercial experience since 2020. Day to day I build web applications in TypeScript, React and C#, but outside of work I like to go beyond web — I run my own homelab with dozens of services, build Smart Home setups (including custom IoT devices) and contribute to open source projects. I'm into AI — I self-host local LLMs, use AI agents and build my own. I'm a fast learner, I value well-written code and I'm not afraid of new technologies.",
+	"experience": {
+		"softiq": {
+			"name": "SoftIQ (formerly Sharply)",
+			"role": "Software Developer",
+			"period": "2022 - present",
+			"description": "Working in a team of developers using Agile methodology. In 2024, Sharply was acquired by SoftIQ. Selected projects:",
+			"highlights": [
+				"2D/3D kitchen countertop configurator for Poland's largest manufacturer",
+				"Web platform for one of the largest used car dealers in Iceland",
+				"Web games for a major retail chain",
+				"Login and remote access application for Windows Server",
+				"Server room management software",
+				"Project for a government institution"
+			]
+		},
+		"julkafit": {
+			"name": "julka.fit",
+			"role": "Freelance Full-Stack Developer",
+			"period": "2020 - 2023",
+			"description": "Built and maintained a website with an online store featuring digital ebook delivery. Technologies: Next.js, Amazon Lambda and Stripe."
+		},
+		"jacekLech": {
+			"name": "Jacek & Lech, AS 4Property",
+			"role": "Administrator",
+			"period": "2021 - present",
+			"description": "Administration of Office365, hosting, DNS and email services for two small real estate companies. General IT support."
+		}
+	},
+	"projects": {
+		"jotCli": {
+			"description": "CLI tool for AI-assisted academic writing. Gathers context, drafts content, reviews for academic rigor. CLI and interactive TUI modes. Distributed via Homebrew, Scoop and curl."
+		},
+		"homelab": {
+			"description": "Home infrastructure on two servers (Proxmox + TrueNAS) that I use daily. Services include media streaming, local cloud gaming with GPU passthrough, local AI models, and automatic reverse proxy and DNS. Everything managed as Infrastructure as Code."
+		},
+		"hydroHomie": {
+			"description": "Hydroponics controller on ESP32-C6 with a custom PCB designed using code. Soil moisture, water level and temperature sensors. Dynamic deep sleep for battery savings, Home Assistant integration via ESPHome."
+		},
+		"resumeTemplate": {
+			"description": "A repository serving as a template for creating resumes using MarkDown. This resume was built using this template."
+		}
+	},
+	"technologiesUsed": "Technologies used:",
+	"openSource": "I actively contribute to open source projects I use — including Streamystats (Jellyfin analytics), ZeroClaw (AI agent) and Wolf (cloud gaming in Docker).",
+	"education": {
+		"dsw": {
+			"school": "DSW University in Wroclaw",
+			"field": "Computer Science, spec. Game Development (B.Eng.)",
+			"period": "2022 - 2026"
+		},
+		"technikum": {
+			"school": "Mechatronics Technical School No. 1 in Warsaw",
+			"field": "IT Technician",
+			"period": "2018 - 2022"
+		}
+	},
+	"spokenLanguages": {
+		"polish": "Polish (Native)",
+		"english": "English (C2)",
+		"german": "German (A1)"
+	}
+}

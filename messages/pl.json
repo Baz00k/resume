@@ -1,0 +1,80 @@
+{
+	"sections": {
+		"about": "O mnie:",
+		"skills": "Umiejętności:",
+		"experience": "Doświadczenie:",
+		"projects": "Projekty",
+		"openSource": "Open Source:",
+		"education": "Edukacja:",
+		"languages": "Języki:",
+		"contact": "Kontakt:"
+	},
+	"skillGroups": {
+		"programmingLanguages": "Języki programowania:",
+		"technologies": "Technologie:",
+		"operatingSystems": "Systemy operacyjne:",
+		"tools": "Narzędzia:"
+	},
+	"about": "Inżynier informatyki i Full Stack Developer z doświadczeniem komercyjnym od 2020 roku. Na co dzień tworzę aplikacje webowe w TypeScript, React i C#, ale po godzinach lubię wykraczać poza web — buduję własny homelab z dziesiątkami serwisów, tworzę Smart Home (w tym własne urządzenia IoT) i kontrybuuję do projektów open source. Interesuję się AI — hostuję lokalne modele LLM, korzystam z agentów AI i tworzę własnych. Szybko się uczę, cenię dobrze napisany kod i nie boję się nowych technologii.",
+	"experience": {
+		"softiq": {
+			"name": "SoftIQ (dawniej Sharply)",
+			"role": "Software Developer",
+			"period": "2022 - obecnie",
+			"description": "Praca w zespole programistów w metodyce Agile. W 2024 roku Sharply zostało przejęte przez SoftIQ. Wybrane projekty:",
+			"highlights": [
+				"Konfigurator blatów kuchennych 2D/3D dla największego polskiego producenta",
+				"Platforma webowa dla jednego z największych dealerów aut używanych w Islandii",
+				"Gry webowe dla dużej sieci handlowej",
+				"Aplikacja do logowania i zdalnego dostępu do Windows Server",
+				"Oprogramowanie do zarządzania serwerownią",
+				"Projekt dla instytucji państwowej"
+			]
+		},
+		"julkafit": {
+			"name": "julka.fit",
+			"role": "Freelance Full-Stack Developer",
+			"period": "2020 - 2023",
+			"description": "Stworzenie i utrzymanie strony internetowej wraz ze sklepem internetowym z e-dostawą ebooków. Technologie: Next.js, Amazon Lambda i Stripe."
+		},
+		"jacekLech": {
+			"name": "Jacek & Lech, AS 4Property",
+			"role": "Administrator",
+			"period": "2021 - obecnie",
+			"description": "Administracja usługi Office365, hostingów, DNS-ów i skrzynek mailowych dla dwóch małych firm zajmującymi się nieruchomościami. Ogólna pomoc w zakresie IT."
+		}
+	},
+	"projects": {
+		"jotCli": {
+			"description": "Narzędzie CLI wspomagające pisanie akademickie z pomocą AI. Zbiera kontekst, tworzy szkice, recenzuje pod kątem rygoru naukowego. Tryb CLI i interaktywny TUI. Dystrybucja przez Homebrew, Scoop i curl."
+		},
+		"homelab": {
+			"description": "Domowa infrastruktura na dwóch serwerach (Proxmox + TrueNAS), z której korzystam na codzień. Serwisy obejmują m.in. streaming mediów, local cloud gaming z GPU passthrough, lokalne modele AI czy automatyczny reverse proxy i DNS. Całość zarządzana jako Infrastructure as Code."
+		},
+		"hydroHomie": {
+			"description": "Kontroler hydroponiki na ESP32-C6 z własnym PCB zaprojektowanym za pomocą kodu. Czujniki wilgotności gleby, poziomu wody i temperatury. Dynamiczny deep sleep dla oszczędności baterii, integracja z Home Assistant przez ESPHome."
+		},
+		"resumeTemplate": {
+			"description": "Repozytorium będące szablonem do tworzenia CV za pomocą MarkDown'u. To CV zostało stworzone z wykorzystaniem tego szablonu."
+		}
+	},
+	"technologiesUsed": "Wykorzystane technologie:",
+	"openSource": "Aktywnie kontrybuuję do projektów open source, z których korzystam — m.in. Streamystats (analityka Jellyfin), ZeroClaw (agent AI) i Wolf (cloud gaming w Dockerze).",
+	"education": {
+		"dsw": {
+			"school": "Uniwersytet DSW we Wrocławiu",
+			"field": "Informatyka, spec. Game Development (inż.)",
+			"period": "2022 - 2026"
+		},
+		"technikum": {
+			"school": "Technikum Mechatroniczne nr 1 w Warszawie",
+			"field": "Technik informatyk",
+			"period": "2018 - 2022"
+		}
+	},
+	"spokenLanguages": {
+		"polish": "Polski (Native)",
+		"english": "Angielski (C2)",
+		"german": "Niemiecki (A1)"
+	}
+}
