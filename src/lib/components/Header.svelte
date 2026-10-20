@@ -1,13 +1,15 @@
 <script lang="ts">
-	import ExportToPdfButton from '#lib/components/ExportToPdfButton.svelte';
+	import DownloadPdf from '#lib/components/DownloadPdf.svelte';
 	import LanguageSwitcher from '#lib/components/LanguageSwitcher.svelte';
-	import type { Locale } from '#lib/i18n.ts';
+	import ThemeToggle from '#lib/components/ThemeToggle.svelte';
+	import type { Locale, Messages } from '#lib/i18n.ts';
 
-	let { locale }: { locale: Locale } = $props();
+	let { locale, m }: { locale: Locale; m: Messages } = $props();
 </script>
 
-<header class="flex w-full items-center justify-between px-2 pt-4 lg:px-6 print:hidden">
+<header class="flex w-full items-center gap-2 px-2 pt-4 lg:px-6 print:hidden">
 	<LanguageSwitcher {locale} />
-	<div class="invisible flex-1"></div>
-	<ExportToPdfButton />
+	<div class="flex-1"></div>
+	<ThemeToggle {m} />
+	<DownloadPdf {locale} {m} />
 </header>

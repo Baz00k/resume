@@ -24,6 +24,7 @@ import Email from '~icons/mdi/email';
 import GitHubMark from '~icons/mdi/github';
 import HomeAssistant from '~icons/mdi/home-assistant';
 import LinkedIn from '~icons/mdi/linkedin';
+import Web from '~icons/mdi/web';
 import ESPHome from '~icons/simple-icons/esphome';
 import Proxmox from '~icons/simple-icons/proxmox';
 import Tailscale from '~icons/simple-icons/tailscale';
@@ -154,13 +155,9 @@ export const spokenLanguages: { id: keyof Messages['spokenLanguages']; icon: Ico
 	{ id: 'german', icon: FlagGermany }
 ];
 
-export const contact: { icon: Icon; label: string; href: string; text: string }[] = [
-	{ icon: Email, label: 'Email:', href: 'mailto:jakub@buzuk.dev', text: 'jakub@buzuk.dev' },
-	{
-		icon: LinkedIn,
-		label: 'LinkedIn:',
-		href: 'https://www.linkedin.com/in/jakub-buzuk',
-		text: '@Jakub Buzuk'
-	},
-	{ icon: GitHubMark, label: 'GitHub:', href: 'https://github.com/Baz00k', text: '@Baz00k' }
+export const contact: { icon: Icon; href: string }[] = [
+	{ icon: Email, href: 'mailto:jakub@buzuk.dev' },
+	{ icon: LinkedIn, href: 'https://www.linkedin.com/in/jakub-buzuk' },
+	{ icon: GitHubMark, href: 'https://github.com/Baz00k' },
+	{ icon: Web, href: 'https://buzuk.dev' }
 ];

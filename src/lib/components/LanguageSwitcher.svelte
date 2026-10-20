@@ -7,7 +7,7 @@
 	const handleLanguageChange = (event: Event & { currentTarget: HTMLSelectElement }) => {
 		const lang = localeParam(event.currentTarget.value as Locale);
 		// Full reload so the prerendered page sets the matching <html lang>.
-		window.location.href = resolve('/[[lang=lang]]', { lang });
+		window.location.href = resolve('/[[lang=lang]]/(site)', { lang });
 	};
 
 	const getLanguageDisplayName = (tag: Locale) =>
