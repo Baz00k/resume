@@ -8,7 +8,7 @@
 </script>
 
 <header class="flex w-full items-center gap-2 px-2 pt-4 lg:px-6 print:hidden">
-	<LanguageSwitcher {locale} />
+	<LanguageSwitcher {locale} {m} />
 	<div class="flex-1"></div>
 	<ThemeToggle {m} />
 	<DownloadPdf {locale} {m} />

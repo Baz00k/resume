@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { localeParam, locales, type Locale } from '#lib/i18n.ts';
+	import { localeParam, locales, type Locale, type Messages } from '#lib/i18n.ts';
 
-	let { locale }: { locale: Locale } = $props();
+	let { locale, m }: { locale: Locale; m: Messages } = $props();
 
 	const handleLanguageChange = (event: Event & { currentTarget: HTMLSelectElement }) => {
 		const lang = localeParam(event.currentTarget.value as Locale);
@@ -18,6 +18,7 @@
 	<select
 		class="rounded-full border-none bg-gray-200 py-2 pr-10 pl-4 capitalize outline-hidden transition-colors duration-300 ease-in-out ring-inset hover:bg-gray-300 focus-visible:ring-2 focus-visible:ring-gray-500 dark:bg-gray-100/10 dark:hover:bg-gray-100/20"
 		value={locale}
+		aria-label={m.ui.language}
 		onchange={handleLanguageChange}
 	>
 		{#each locales as tag (tag)}

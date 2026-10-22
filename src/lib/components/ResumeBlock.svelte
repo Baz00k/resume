@@ -18,7 +18,7 @@
 </script>
 
 {#snippet entryTitle(title: string, aside?: string, href?: string)}
-	<div class="flex flex-wrap items-baseline justify-between gap-x-4">
+	<div class="mb-[0.8mm] flex flex-wrap items-baseline justify-between gap-x-4">
 		<h3 class="text-[10.5pt] font-semibold text-heading">{title}</h3>
 		{#if href}
 			<a {href} class="text-[8.5pt] text-muted hover:underline">{aside}</a>
@@ -35,10 +35,10 @@
 		<img
 			src={profile}
 			alt="Jakub Buzuk"
-			class="size-[26mm] shrink-0 rounded-full border border-gray-200 object-cover"
+			class="size-[26mm] shrink-0 rounded-full border border-line object-cover"
 		/>
 		<div class="flex flex-col gap-[1.5mm]">
-			<h1 class="font-display text-[28pt]/none text-heading">Jakub Buzuk</h1>
+			<h1 class="text-[28pt]/none font-semibold tracking-[-0.045em] text-heading">Jakub Buzuk</h1>
 			<p class="text-[11.5pt] font-medium text-accent">{m.headline}</p>
 			<ul
 				class="flex flex-wrap justify-center gap-x-[4mm] gap-y-[1mm] text-[8.5pt] @xl:justify-start"
@@ -53,9 +53,11 @@
 		</div>
 	</header>
 {:else if block.kind === 'heading'}
+	<!-- Markdown-style: reads as a heading to anyone, and as code to developers. -->
 	<h2
-		class="text-[12pt] font-semibold text-heading underline decoration-[2.5px] underline-offset-[5px]"
+		class="flex items-baseline gap-[2mm] text-[15pt] font-semibold tracking-[-0.03em] text-heading"
 	>
+		<span class="font-mono font-medium text-accent" aria-hidden="true">#</span>
 		{m.sections[block.section]}
 	</h2>
 {:else if block.kind === 'about'}
@@ -66,7 +68,7 @@
 		<ul class="flex flex-wrap gap-[1.2mm]">
 			{#each block.group.skills as skill (skill.name)}
 				<li
-					class="flex items-center gap-[1.2mm] rounded-[1.2mm] bg-chip px-[1.6mm] py-[0.5mm] text-[8.5pt]"
+					class="flex items-center gap-[1.2mm] rounded-[1.2mm] border border-line bg-chip px-[1.6mm] py-[0.5mm] font-mono text-[8pt]"
 				>
 					<skill.icon />
 					{skill.name}
@@ -94,7 +96,7 @@
 	{@const url = block.project.url}
 	{@render entryTitle(block.project.name, url && display(url), url)}
 	<p>{m.projects[block.project.id].description}</p>
-	<p class="mt-[0.5mm] text-[8.5pt] text-muted">
+	<p class="mt-[1.4mm] text-[8.5pt] text-muted">
 		<span class="font-medium">{m.technologiesUsed}</span>
 		{block.project.technologies.join(' · ')}
 	</p>

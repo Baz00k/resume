@@ -19,6 +19,11 @@ Scripts live in `package.json`; run `pnpm check` and `pnpm lint` before finishin
 - Block styles use print units (pt, mm); the web page scales them with `zoom`, and container queries (`@xl:`) give narrow screens a stacked layout.
 - Themes: `data-theme` on `<html>` (inline script in `app.html`, state in `src/lib/theme.svelte.ts`), Tailwind's `dark:` variant follows it.
 
+## WEB PAGE EXTRAS
+
+- `(site)/+page.svelte` adds two web-only layers around the shared blocks, both off the critical path. `src/lib/components/AsciiField.svelte` is the canvas behind the card: imported once the browser is idle, it stops while hidden or covered by the card and draws one still frame under reduced motion. `src/lib/terminal/` is the easter egg: only `Console.svelte` ships with the page; the backtick key loads `Terminal.svelte` and JetBrains Mono on first use.
+- The terminal's own strings (help, errors) stay English in every locale, like its commands; resume text comes from the dictionaries.
+
 ## CONVENTIONS
 
 - Import app code via `#lib/...` with the real file extension (`#lib/i18n.ts`, `#lib/components/Header.svelte`). Kit loads `src/params.ts` with plain Node, so `.ts` extensions and `with { type: 'json' }` keep it loadable.

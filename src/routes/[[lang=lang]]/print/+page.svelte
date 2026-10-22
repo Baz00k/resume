@@ -21,7 +21,7 @@
 	{page} / {pages}
 {/snippet}
 
-<div class="min-h-screen bg-gray-300 py-8 dark:bg-dark print:bg-transparent print:p-0">
+<div class="min-h-screen bg-gray-300 py-8 dark:bg-neutral-800 print:bg-transparent print:p-0">
 	<Paginator {blocks} {block} {footer} />
 </div>
 
