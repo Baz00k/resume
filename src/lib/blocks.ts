@@ -21,7 +21,9 @@ export type ResumeBlock = Block &
 /** A section heading that stays with the first of the blocks below it. */
 const section = (id: keyof Messages['sections'], items: ResumeBlock[]): ResumeBlock[] => [
 	{ kind: 'heading', section: id, space: 'section', keepWithNext: true },
-	...items.map((item, index): ResumeBlock => ({ space: index === 0 ? 'tight' : 'item', ...item }))
+	...items.map((item, index): ResumeBlock =>
+		index === 0 ? { ...item, space: 'lead' } : { space: 'item', ...item }
+	)
 ];
 
 export const blocks: ResumeBlock[] = [

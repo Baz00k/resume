@@ -6,8 +6,8 @@ export interface BreakOptions {
 }
 
 export interface Block extends BreakOptions {
-	/** Gap above the block, dropped at the top of a sheet. */
-	space?: 'tight' | 'item' | 'section';
+	/** Gap above the block, dropped at the top of a sheet. `lead` follows a section heading. */
+	space?: 'tight' | 'lead' | 'item' | 'section';
 }
 
 /** Per-sheet result that Paginator publishes in `data-pagination` for scripts/pdf.ts. */

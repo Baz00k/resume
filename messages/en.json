@@ -1,20 +1,20 @@
 {
 	"headline": "Full Stack Developer",
 	"sections": {
-		"about": "About me:",
-		"skills": "Skills:",
-		"experience": "Experience:",
+		"about": "About me",
+		"skills": "Skills",
+		"experience": "Experience",
 		"projects": "Projects",
-		"openSource": "Open Source:",
-		"education": "Education:",
-		"languages": "Languages:",
-		"contact": "Contact:"
+		"openSource": "Open Source",
+		"education": "Education",
+		"languages": "Languages",
+		"contact": "Contact"
 	},
 	"skillGroups": {
-		"programmingLanguages": "Programming languages:",
-		"technologies": "Technologies:",
-		"operatingSystems": "Operating systems:",
-		"tools": "Tools:"
+		"programmingLanguages": "Programming languages",
+		"technologies": "Technologies",
+		"operatingSystems": "Operating systems",
+		"tools": "Tools"
 	},
 	"about": "Computer Science engineer and Full Stack Developer with commercial experience since 2020. Day to day I build web applications in TypeScript, React and C#, but outside of work I like to go beyond web — I run my own homelab with dozens of services, build Smart Home setups (including custom IoT devices) and contribute to open source projects. I'm into AI — I self-host local LLMs, use AI agents and build my own. I'm a fast learner, I value well-written code and I'm not afraid of new technologies.",
 	"experience": {
@@ -81,6 +81,8 @@
 	"ui": {
 		"switchToDark": "Switch to dark theme",
 		"switchToLight": "Switch to light theme",
-		"downloadPdf": "Download CV as PDF"
+		"downloadPdf": "Download CV as PDF",
+		"language": "Language",
+		"terminalHint": "press {key} for a terminal"
 	}
 }

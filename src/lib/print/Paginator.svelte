@@ -6,7 +6,12 @@
 <script lang="ts" module>
 	import type { Block } from './paginate.ts';
 
-	const spaceClass = { tight: 'mt-[1.5mm]', item: 'mt-[3.5mm]', section: 'mt-[6mm]' };
+	const spaceClass = {
+		tight: 'mt-[2.5mm]',
+		lead: 'mt-[4mm]',
+		item: 'mt-[6mm]',
+		section: 'mt-[9mm]'
+	};
 
 	/** Wrapper classes for a block; also used by the web page so both space blocks alike. */
 	export const blockClass = (block: Block) => [

@@ -9,39 +9,44 @@
 	--font-sans:
 		ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
 		'Noto Color Emoji';
-	--font-body: Poppins, system-ui, sans-serif;
-	--font-display: Raleway, system-ui, sans-serif;
-	--color-dark: #0f172a;
-	--color-tokyo-storm: #24283b;
+	--font-body: Geist, system-ui, sans-serif;
+	--font-mono: 'Geist Mono', ui-monospace, monospace;
 }
 
 /* Theme-aware resume colors, switched by `data-theme` below. */
 @theme inline {
+	--color-page: var(--page);
 	--color-paper: var(--paper);
 	--color-ink: var(--ink);
 	--color-heading: var(--heading);
 	--color-muted: var(--muted);
 	--color-accent: var(--accent);
 	--color-chip: var(--chip);
+	--color-line: var(--line);
 }
 
+/* Vercel's Geist palette: neutral greys and one blue accent. */
 :root {
+	--page: #fafafa;
 	--paper: #ffffff;
-	--ink: #0f0f14;
-	--heading: #343b58;
-	--muted: #565a6e;
-	--accent: #33635c;
-	--chip: rgb(156 163 175 / 0.14);
+	--ink: #171717;
+	--heading: #0a0a0a;
+	--muted: #666666;
+	--accent: #0068d6;
+	--chip: #f5f5f5;
+	--line: #eaeaea;
 }
 
 :root[data-theme='dark'] {
 	color-scheme: dark;
-	--paper: var(--color-tokyo-storm);
-	--ink: #b4f9f8;
-	--heading: #d9fcfb;
-	--muted: #a9b1d6;
-	--accent: #73daca;
-	--chip: rgb(243 244 246 / 0.1);
+	--page: #000000;
+	--paper: #0a0a0a;
+	--ink: #ededed;
+	--heading: #ffffff;
+	--muted: #a1a1a1;
+	--accent: #52a8ff;
+	--chip: #1a1a1a;
+	--line: #2e2e2e;
 }
 
 /* The sheet the resume is laid out on, shared by the web page and the PDF sheets. */

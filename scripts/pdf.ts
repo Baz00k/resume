@@ -42,7 +42,7 @@ try {
 			const file = join('build', pdfPath(locale, theme));
 			// Fonts come from Google Fonts; without them the PDF would silently use fallbacks.
 			const missingFonts = await page.evaluate(() =>
-				['Poppins', 'Raleway'].filter(
+				['Geist', 'Geist Mono'].filter(
 					(family) =>
 						![...document.fonts].some((font) => font.family === family && font.status === 'loaded')
 				)

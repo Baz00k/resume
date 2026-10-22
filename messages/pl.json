@@ -1,20 +1,20 @@
 {
 	"headline": "Full Stack Developer",
 	"sections": {
-		"about": "O mnie:",
-		"skills": "Umiejętności:",
-		"experience": "Doświadczenie:",
+		"about": "O mnie",
+		"skills": "Umiejętności",
+		"experience": "Doświadczenie",
 		"projects": "Projekty",
-		"openSource": "Open Source:",
-		"education": "Edukacja:",
-		"languages": "Języki:",
-		"contact": "Kontakt:"
+		"openSource": "Open Source",
+		"education": "Edukacja",
+		"languages": "Języki",
+		"contact": "Kontakt"
 	},
 	"skillGroups": {
-		"programmingLanguages": "Języki programowania:",
-		"technologies": "Technologie:",
-		"operatingSystems": "Systemy operacyjne:",
-		"tools": "Narzędzia:"
+		"programmingLanguages": "Języki programowania",
+		"technologies": "Technologie",
+		"operatingSystems": "Systemy operacyjne",
+		"tools": "Narzędzia"
 	},
 	"about": "Inżynier informatyki i Full Stack Developer z doświadczeniem komercyjnym od 2020 roku. Na co dzień tworzę aplikacje webowe w TypeScript, React i C#, ale po godzinach lubię wykraczać poza web — buduję własny homelab z dziesiątkami serwisów, tworzę Smart Home (w tym własne urządzenia IoT) i kontrybuuję do projektów open source. Interesuję się AI — hostuję lokalne modele LLM, korzystam z agentów AI i tworzę własnych. Szybko się uczę, cenię dobrze napisany kod i nie boję się nowych technologii.",
 	"experience": {
@@ -81,6 +81,8 @@
 	"ui": {
 		"switchToDark": "Włącz ciemny motyw",
 		"switchToLight": "Włącz jasny motyw",
-		"downloadPdf": "Pobierz CV w PDF"
+		"downloadPdf": "Pobierz CV w PDF",
+		"language": "Język",
+		"terminalHint": "naciśnij {key}, aby otworzyć terminal"
 	}
 }
