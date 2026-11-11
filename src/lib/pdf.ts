@@ -1,4 +1,4 @@
-import { localeParam, locales, type Locale } from '#lib/i18n.ts';
+import { localePath, locales, type Locale } from '#lib/i18n.ts';
 import { themes, type Theme } from '#lib/theme.ts';
 
 /** One PDF the build writes, and everything the site and the build need to know about it. */
@@ -16,13 +16,11 @@ export interface Pdf {
 }
 
 export const pdf = (locale: Locale, theme: Theme): Pdf => {
-	const lang = localeParam(locale);
 	const file = `cv/jakub-buzuk-${locale}-${theme}.pdf`;
 	return {
 		locale,
 		theme,
-		// The site deploys at the domain root (no `paths.base`), and routes end in a slash (`trailingSlash = 'always'`).
-		printPath: lang ? `/${lang}/print/` : '/print/',
+		printPath: `${localePath(locale)}print/`,
 		file,
 		href: `/${file}`,
 		downloadName: `Jakub-Buzuk-CV-${locale.toUpperCase()}.pdf`

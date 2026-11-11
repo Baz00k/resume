@@ -16,8 +16,6 @@ export const isLocale = (value: unknown): value is Locale => locales.includes(va
 export const localeFromParam = (lang: string | undefined): Locale =>
 	isLocale(lang) ? lang : baseLocale;
 
-export const localeParam = (locale: Locale) => (locale === baseLocale ? undefined : locale);
-
 /**
  * Path of a locale's page with the trailing slash pages are served at: `/` for the base locale, `/en/`
  * otherwise. Built as a string because the site deploys at the domain root, so there is no `paths.base` to
