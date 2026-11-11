@@ -89,6 +89,6 @@
 		"switchToLight": "Włącz jasny motyw",
 		"downloadPdf": "Pobierz CV w PDF",
 		"language": "Język",
-		"terminalHint": "naciśnij {key}, aby otworzyć terminal"
+		"terminalHint": { "before": "naciśnij ", "after": ", aby otworzyć terminal" }
 	}
 }

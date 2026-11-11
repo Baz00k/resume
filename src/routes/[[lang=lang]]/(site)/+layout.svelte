@@ -3,7 +3,7 @@
 	import Header from '#lib/components/Header.svelte';
 	import { baseLocale, localeParam, locales, type Locale } from '#lib/i18n.ts';
 	import profile from '#lib/images/profile.jpg';
-	import { contact, siteUrl, skillGroups } from '#lib/resume.ts';
+	import { contact, education, siteUrl, skillGroups } from '#lib/resume.ts';
 	import type { LayoutProps } from './$types';
 
 	let { data, children }: LayoutProps = $props();
@@ -37,7 +37,10 @@
 				sameAs: contact
 					.map((link) => link.href)
 					.filter((href) => href.startsWith('https://') && href !== siteUrl),
-				alumniOf: { '@type': 'CollegeOrUniversity', name: data.m.education.dsw.school },
+				alumniOf: education.map((id) => ({
+					'@type': 'EducationalOrganization',
+					name: data.m.education[id].school
+				})),
 				knowsAbout: skillGroups.flatMap((group) => group.skills.map((skill) => skill.name))
 			}
 		}).replaceAll('<', '\\u003c')
