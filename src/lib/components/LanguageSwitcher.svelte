@@ -3,15 +3,11 @@
 	import Check from '~icons/material-symbols/check';
 	import ExpandMore from '~icons/material-symbols/expand-more';
 	import Translate from '~icons/material-symbols/translate';
-	import { resolve } from '$app/paths';
-	import { localeParam, locales, type Locale, type Messages } from '#lib/i18n.ts';
+	import { localePath, locales, type Locale, type Messages } from '#lib/i18n.ts';
 
 	let { locale, m }: { locale: Locale; m: Messages } = $props();
 
 	const id = $props.id();
-
-	const href = (tag: Locale) =>
-		resolve('/[[lang=lang]]/(site)', { lang: localeParam(tag) }).replace(/\/?$/, '/');
 
 	const autonym = (tag: Locale) => new Intl.DisplayNames([tag], { type: 'language' }).of(tag);
 </script>
@@ -39,7 +35,7 @@
 				<li>
 					<!-- Full reload so the prerendered page sets the matching <html lang>. -->
 					<a
-						href={href(tag)}
+						href={localePath(tag)}
 						hreflang={tag}
 						lang={tag}
 						aria-current={tag === locale ? 'page' : undefined}
