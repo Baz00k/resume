@@ -1,28 +1,18 @@
 <!--
 	Lays blocks out on fixed A4 sheets. Every block is first rendered in one column
 	at sheet width to measure it, then `paginate` assigns blocks to sheets. When done,
-	`data-pagination` on the root lists each sheet's fill and overflow for scripts/pdf.ts.
+	`reportAttribute` on the root lists each sheet's fill and overflow for scripts/pdf.ts.
 -->
-<script lang="ts" module>
-	import type { Block } from './paginate.ts';
-
-	const spaceClass = {
-		tight: 'mt-[2.5mm]',
-		lead: 'mt-[4mm]',
-		item: 'mt-[6mm]',
-		section: 'mt-[9mm]'
-	};
-
-	/** Wrapper classes for a block; also used by the web page so both space blocks alike. */
-	export const blockClass = (block: Block) => [
-		'flow-root first:mt-0',
-		block.space && spaceClass[block.space]
-	];
-</script>
-
 <script lang="ts" generics="T extends Block">
 	import { tick, type Snippet } from 'svelte';
-	import { paginate, type SheetReport } from './paginate.ts';
+	import {
+		blockClass,
+		paginate,
+		reportAttribute,
+		sheetReport,
+		type Block,
+		type SheetReport
+	} from '#lib/sheet.ts';
 
 	interface Props {
 		blocks: T[];
@@ -64,14 +54,16 @@
 
 			await tick();
 			if (cancelled) return;
-			report = contents.slice(0, pages.length).map((content) => {
-				const box = content.getBoundingClientRect();
-				const bottom = content.lastElementChild?.getBoundingClientRect().bottom ?? box.top;
-				return {
-					fill: Math.round(((bottom - box.top) / box.height) * 100) / 100,
-					overflow: bottom > box.bottom + 0.5
-				};
-			});
+			report = sheetReport(
+				contents.slice(0, pages.length).map((content) => {
+					const box = content.getBoundingClientRect();
+					return {
+						top: box.top,
+						bottom: box.bottom,
+						contentBottom: content.lastElementChild?.getBoundingClientRect().bottom ?? box.top
+					};
+				})
+			);
 		})();
 
 		return () => {
@@ -95,7 +87,7 @@
 
 <div
 	class="flex flex-col items-center gap-8 print:gap-0"
-	data-pagination={report ? JSON.stringify(report) : undefined}
+	{...{ [reportAttribute]: report ? JSON.stringify(report) : undefined }}
 >
 	{#if pages}
 		{#each pages as page, p (p)}

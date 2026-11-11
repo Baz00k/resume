@@ -2,7 +2,7 @@
 	import type { Component } from 'svelte';
 	import ResumeBlock from '#lib/components/ResumeBlock.svelte';
 	import { blocks } from '#lib/blocks.ts';
-	import { blockClass } from '#lib/print/Paginator.svelte';
+	import { blockClass } from '#lib/sheet.ts';
 	import Console from '#lib/terminal/Console.svelte';
 	import type { PageProps } from './$types';
 
