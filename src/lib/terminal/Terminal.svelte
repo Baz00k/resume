@@ -126,7 +126,7 @@
 		...Object.fromEntries(
 			projects.flatMap((project) => (project.url ? [[kebab(project.id), project.url]] : []))
 		),
-		...Object.fromEntries(experience.map((job) => [kebab(job.id), job.url]))
+		...Object.fromEntries(experience.flatMap((job) => (job.url ? [[kebab(job.id), job.url]] : [])))
 	};
 
 	const headingIndex = (section: keyof Messages['sections']) =>
@@ -556,8 +556,10 @@
 		</div>
 		<div>
 			<span class="text-(--t-blue) italic">{text.role}</span>
-			<span class="text-(--t-dim)">·</span>
-			{@render link(job.url)}
+			{#if job.url}
+				<span class="text-(--t-dim)">·</span>
+				{@render link(job.url)}
+			{/if}
 		</div>
 		<div class="max-w-[90ch]">{text.description}</div>
 		{#if 'highlights' in text}
@@ -684,6 +686,7 @@
 					<span class="text-(--t-dim)">{text.period}</span>
 				</div>
 				<div class="text-(--t-dim)">{text.field}</div>
+				{#if 'thesis' in text}<div class="text-(--t-dim)">{text.thesis}</div>{/if}
 			</div>
 		{/each}
 	{:else if out.type === 'languages'}
@@ -764,11 +767,11 @@
 					>
 				</div>
 				<div class="text-(--t-dim)">───────────────</div>
-				{#each [['Role', m.headline], ['Uptime', `${new Date().getFullYear() - 2020} years commercial (since 2020)`], ['Languages', groups.programmingLanguages?.join(', ')], ['Stack', groups.technologies
+				{#each [['Role', m.headline], ['Uptime', `${new Date().getFullYear() - 2021} years commercial (since 2021)`], ['Languages', groups.languages
 							?.slice(0, 6)
-							.join(', ')], ['OS', groups.operatingSystems?.join(', ')], ['Editors', groups.tools
-							?.slice(0, 4)
-							.join(', ')], ['Shell', 'Bash/Zsh'], ['Locale', locale === 'pl' ? 'pl_PL.UTF-8' : 'en_US.UTF-8'], ['Theme', theme.current === 'dark' ? 'Geist Dark' : 'Geist Light']] as [key, value] (key)}
+							.join(', ')], ['Frontend', groups.frontend
+							?.slice(0, 5)
+							.join(', ')], ['Backend', groups.backend?.join(', ')], ['AI', groups.ai?.join(', ')], ['OS', 'Linux'], ['Shell', 'Bash/Zsh'], ['Locale', locale === 'pl' ? 'pl_PL.UTF-8' : 'en_US.UTF-8'], ['Theme', theme.current === 'dark' ? 'Geist Dark' : 'Geist Light']] as [key, value] (key)}
 					<div><span class="font-bold text-(--t-blue)">{key}</span>: {value}</div>
 				{/each}
 				<div class="mt-2 flex">

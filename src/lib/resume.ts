@@ -7,41 +7,42 @@ import Apple from '~icons/fa6-brands/apple';
 import Linux from '~icons/fa6-brands/linux';
 import NodeJs from '~icons/fa6-brands/node-js';
 import Windows from '~icons/fa6-brands/windows';
+import Angular from '~icons/devicon/angular';
 import CSharp from '~icons/devicon/csharp';
-import Dart from '~icons/devicon/dart';
+import DotNet from '~icons/devicon/dotnetcore';
 import Python from '~icons/devicon/python';
 import React from '~icons/devicon/react';
+import Tailwind from '~icons/devicon/tailwindcss';
 import Traefik from '~icons/devicon/traefikproxy';
 import Vue from '~icons/devicon/vuejs';
-import Figma from '~icons/logos/figma';
-import Firebase from '~icons/logos/firebase-icon';
-import VisualStudio from '~icons/logos/visual-studio';
-import VSCode from '~icons/logos/visual-studio-code';
 import Email from '~icons/mdi/email';
 import GitHubMark from '~icons/mdi/github';
-import HomeAssistant from '~icons/mdi/home-assistant';
 import LinkedIn from '~icons/mdi/linkedin';
 import Web from '~icons/mdi/web';
-import ESPHome from '~icons/simple-icons/esphome';
 // Single-colour marks follow the text colour, so they stay visible in the dark theme.
-import GitHub from '~icons/simple-icons/github';
+import Bun from '~icons/simple-icons/bun';
+import Claude from '~icons/simple-icons/claude';
+import Cloudflare from '~icons/simple-icons/cloudflare';
+import Django from '~icons/simple-icons/django';
+import GitHubActions from '~icons/simple-icons/githubactions';
+import Mcp from '~icons/simple-icons/modelcontextprotocol';
 import NextJs from '~icons/simple-icons/nextdotjs';
+import OpenCode from '~icons/simple-icons/opencode';
+import OpenAi from '~icons/simple-icons/openai';
+import OpenApi from '~icons/simple-icons/openapiinitiative';
 import Proxmox from '~icons/simple-icons/proxmox';
+import Rust from '~icons/simple-icons/rust';
 import Tailscale from '~icons/simple-icons/tailscale';
-import Unity from '~icons/simple-icons/unity';
-import Zed from '~icons/simple-icons/zedindustries';
-import Bash from '~icons/skill-icons/bash-dark';
 import Css from '~icons/skill-icons/css';
 import Docker from '~icons/skill-icons/docker';
 import Git from '~icons/skill-icons/git';
 import Html from '~icons/skill-icons/html';
 import JavaScript from '~icons/skill-icons/javascript';
-import Neovim from '~icons/skill-icons/neovim-dark';
-import Photoshop from '~icons/skill-icons/photoshop';
 import Svelte from '~icons/skill-icons/svelte';
 import TypeScript from '~icons/skill-icons/typescript';
-import WordPress from '~icons/skill-icons/wordpress';
-import ReactNative from '~icons/tabler/brand-react-native';
+import Agents from '~icons/tabler/robot';
+import Orchestration from '~icons/tabler/sitemap';
+import MicroFrontends from '~icons/tabler/puzzle';
 import FlagGermany from '~icons/twemoji/flag-for-flag-germany';
 import FlagPoland from '~icons/twemoji/flag-for-flag-poland';
 import FlagUnitedStates from '~icons/twemoji/flag-for-flag-united-states';
@@ -55,66 +56,77 @@ export interface Skill {
 
 export const skillGroups: { id: keyof Messages['skillGroups']; skills: Skill[] }[] = [
 	{
-		id: 'programmingLanguages',
+		id: 'languages',
 		skills: [
 			{ name: 'TypeScript', icon: TypeScript },
 			{ name: 'JavaScript', icon: JavaScript },
-			{ name: 'Python', icon: Python },
 			{ name: 'C#', icon: CSharp },
-			{ name: 'Dart', icon: Dart },
+			{ name: 'Python', icon: Python },
+			{ name: 'Rust', icon: Rust },
 			{ name: 'HTML', icon: Html },
 			{ name: 'CSS', icon: Css }
 		]
 	},
 	{
-		id: 'technologies',
+		id: 'frontend',
 		skills: [
 			{ name: 'React', icon: React },
-			{ name: 'Vue', icon: Vue },
-			{ name: 'React Native', icon: ReactNative },
-			{ name: 'Next.js', icon: NextJs },
+			{ name: 'Angular', icon: Angular },
 			{ name: 'Svelte', icon: Svelte },
+			{ name: 'Vue', icon: Vue },
+			{ name: 'Next.js', icon: NextJs },
+			{ name: 'Tailwind CSS', icon: Tailwind },
+			{ name: 'Micro-frontends', icon: MicroFrontends }
+		]
+	},
+	{
+		id: 'backend',
+		skills: [
+			{ name: 'ASP.NET Core', icon: DotNet },
+			{ name: 'Entity Framework', icon: DotNet },
 			{ name: 'Node.js', icon: NodeJs },
-			{ name: 'Git', icon: Git },
-			{ name: 'GitHub', icon: GitHub },
+			{ name: 'Bun', icon: Bun },
+			{ name: 'Django', icon: Django },
+			{ name: 'REST / OpenAPI', icon: OpenApi }
+		]
+	},
+	{
+		id: 'infrastructure',
+		skills: [
 			{ name: 'Docker', icon: Docker },
+			{ name: 'Git', icon: Git },
+			{ name: 'GitHub Actions', icon: GitHubActions },
+			{ name: 'Proxmox', icon: Proxmox },
 			{ name: 'Traefik', icon: Traefik },
 			{ name: 'Tailscale', icon: Tailscale },
-			{ name: 'Home Assistant', icon: HomeAssistant },
-			{ name: 'ESPHome', icon: ESPHome },
-			{ name: 'Proxmox', icon: Proxmox },
-			{ name: 'WordPress', icon: WordPress },
-			{ name: 'Firebase', icon: Firebase },
-			{ name: 'Unity', icon: Unity }
+			{ name: 'Cloudflare', icon: Cloudflare }
 		]
 	},
 	{
-		id: 'operatingSystems',
+		id: 'systems',
 		skills: [
+			{ name: 'Linux', icon: Linux },
+			{ name: 'macOS', icon: Apple },
 			{ name: 'Windows', icon: Windows },
-			{ name: 'Windows Server', icon: Windows },
-			{ name: 'Linux (Debian, Ubuntu, Arch)', icon: Linux },
-			{ name: 'macOS', icon: Apple }
+			{ name: 'Windows Server / Active Directory', icon: Windows }
 		]
 	},
 	{
-		id: 'tools',
+		id: 'ai',
 		skills: [
-			{ name: 'Visual Studio Code', icon: VSCode },
-			{ name: 'Neovim', icon: Neovim },
-			{ name: 'Visual Studio', icon: VisualStudio },
-			{ name: 'Zed', icon: Zed },
-			{ name: 'Bash/Zsh', icon: Bash },
-			{ name: 'Photoshop', icon: Photoshop },
-			{ name: 'Figma', icon: Figma }
+			{ name: 'AI agents', icon: Agents },
+			{ name: 'T3 Code', icon: Orchestration },
+			{ name: 'OpenCode', icon: OpenCode },
+			{ name: 'Claude Code', icon: Claude },
+			{ name: 'Codex', icon: OpenAi },
+			{ name: 'MCP', icon: Mcp }
 		]
 	}
 ];
 
-export const experience: { id: keyof Messages['experience']; url: string }[] = [
+export const experience: { id: keyof Messages['experience']; url?: string }[] = [
 	{ id: 'softiq', url: 'https://softiq.pl' },
-	{ id: 'julkafit', url: 'https://www.julkamigdalska.pl/' },
-	{ id: 'jacekLech', url: 'https://jaceklech.pl' }
+	{ id: 'freelance', url: 'https://www.julkamigdalska.pl/' }
 ];
 
 export const projects: {
@@ -124,27 +136,62 @@ export const projects: {
 	technologies: string[];
 }[] = [
 	{
-		id: 'jotCli',
-		name: 'Jot CLI',
-		url: 'https://github.com/Baz00k/jot-cli',
-		technologies: ['TypeScript', 'Bun', 'Effect', 'React', 'OpenTUI']
+		id: 'wolfUiNext',
+		name: 'Wolf UI Next',
+		url: 'https://github.com/Baz00k/wolf-ui-next',
+		technologies: ['Rust', 'Dioxus', 'Tokio', 'OpenAPI', 'Docker', 'GitHub Actions']
+	},
+	{
+		id: 'gowCollection',
+		name: 'GoW Collection',
+		url: 'https://github.com/Baz00k/gow-collection',
+		technologies: ['Docker', 'Bash', 'GitHub Actions', 'GHCR']
 	},
 	{
 		id: 'homelab',
 		name: 'Homelab',
-		technologies: ['Proxmox', 'TrueNAS', 'Docker', 'Traefik', 'Tailscale', 'Cloudflare Tunnel']
+		technologies: [
+			'Proxmox',
+			'TrueNAS',
+			'Docker',
+			'Komodo',
+			'Traefik',
+			'Tailscale',
+			'Cloudflare Tunnel',
+			'CLIProxyAPI',
+			'llama.cpp'
+		]
+	},
+	{
+		id: 'auchanCli',
+		name: 'auchan-cli',
+		technologies: ['TypeScript', 'Effect', 'Playwright', 'Vitest']
 	},
 	{
 		id: 'hydroHomie',
 		name: 'Hydro Homie',
-		url: 'https://github.com/Baz00k/hydro-homie',
-		technologies: ['ESPHome', 'ESP32-C6', 'atopile', 'Home Assistant']
+		technologies: ['ESP32-C6', 'ESPHome', 'atopile', 'KiCad', 'Home Assistant']
 	},
 	{
-		id: 'resumeTemplate',
-		name: 'Resume template',
-		url: 'https://github.com/Baz00k/resume-template',
-		technologies: ['Svelte (SvelteKit)', 'TailwindCSS', 'TypeScript', 'MDsveX']
+		id: 'slopBlast',
+		name: 'Slop Blast',
+		url: 'https://slop-blast.buzuk.dev',
+		technologies: [
+			'TypeScript',
+			'React',
+			'TanStack Start',
+			'SQLite',
+			'Drizzle',
+			'WebAuthn',
+			'Playwright',
+			'Docker'
+		]
+	},
+	{
+		id: 'resume',
+		name: 'buzuk.dev',
+		url: 'https://github.com/Baz00k/resume',
+		technologies: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Playwright', 'Canvas 2D']
 	}
 ];
 

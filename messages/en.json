@@ -1,5 +1,5 @@
 {
-	"headline": "Full Stack Developer",
+	"headline": "Full Stack Engineer",
 	"sections": {
 		"about": "About me",
 		"skills": "Skills",
@@ -11,70 +11,75 @@
 		"contact": "Contact"
 	},
 	"skillGroups": {
-		"programmingLanguages": "Programming languages",
-		"technologies": "Technologies",
-		"operatingSystems": "Operating systems",
-		"tools": "Tools"
+		"languages": "Languages",
+		"frontend": "Frontend",
+		"backend": "Backend",
+		"infrastructure": "DevOps & infrastructure",
+		"systems": "Operating systems",
+		"ai": "AI"
 	},
-	"about": "Computer Science engineer and Full Stack Developer with commercial experience since 2020. Day to day I build web applications in TypeScript, React and C#, but outside of work I like to go beyond web — I run my own homelab with dozens of services, build Smart Home setups (including custom IoT devices) and contribute to open source projects. I'm into AI — I self-host local LLMs, use AI agents and build my own. I'm a fast learner, I value well-written code and I'm not afraid of new technologies.",
+	"about": "Full stack engineer with over five years of commercial experience building web applications for clients in Poland and abroad, from promotional sites to large systems for the public sector and finance. My main stack is TypeScript (React, Angular, Svelte) and .NET. I work AI-first: I design the architecture, break the work into tasks and orchestrate coding agents through implementation, refactoring and migrations, then review and test every change before it ships. Outside work I run a homelab managed as code, design IoT devices from PCB to firmware and contribute to open-source projects I use.",
 	"experience": {
 		"softiq": {
 			"name": "SoftIQ (formerly Sharply)",
-			"role": "Software Developer",
-			"period": "2022 - present",
-			"description": "Working in a team of developers using Agile methodology. In 2024, Sharply was acquired by SoftIQ. Selected projects:",
+			"role": "Full Stack Developer",
+			"period": "05/2022 – present",
+			"description": "Web applications for clients in Poland and abroad, some of them built in direct contact with the client. Sharply became part of SoftIQ in 2024.",
 			"highlights": [
-				"2D/3D kitchen countertop configurator for Poland's largest manufacturer",
-				"Web platform for one of the largest used car dealers in Iceland",
-				"Web games for a major retail chain",
-				"Login and remote access application for Windows Server",
-				"Server room management software",
-				"Project for a government institution"
+				"Worked on migrating a legacy finance system to micro-frontends (Angular, Svelte) with Java and .NET backends behind a proxy layer, doing most of the work with AI agents.",
+				"Developed a large public-sector platform built on React micro-frontends: complex forms with interdependent fields and validation, and a shared component library.",
+				"Rewrote an ASP.NET Core application integrated with Windows Active Directory for .NET 10, then extended and maintained it.",
+				"Developed a full-stack product configurator (.NET, SignalR, Vue, Konva) that sends finished designs to a production system, and 2D room and server-rack visualizations in Babylon.js.",
+				"Built Django and React web platforms for an international client, including a car sales and rental marketplace with a CMS."
 			]
 		},
-		"julkafit": {
-			"name": "julka.fit",
-			"role": "Freelance Full-Stack Developer",
-			"period": "2020 - 2023",
-			"description": "Built and maintained a website with an online store featuring digital ebook delivery. Technologies: Next.js, Amazon Lambda and Stripe."
-		},
-		"jacekLech": {
-			"name": "Jacek & Lech, AS 4Property",
-			"role": "Administrator",
-			"period": "2021 - present",
-			"description": "Administration of Office365, hosting, DNS and email services for two small real estate companies. General IT support."
+		"freelance": {
+			"name": "Self-employed",
+			"role": "Full Stack Developer",
+			"period": "2021 – 2022",
+			"description": "Built and maintained an online store with automated e-book delivery for a small fitness business (Next.js, AWS Lambda, Stripe)."
 		}
 	},
 	"projects": {
-		"jotCli": {
-			"description": "CLI tool for AI-assisted academic writing. Gathers context, drafts content, reviews for academic rigor. CLI and interactive TUI modes. Distributed via Homebrew, Scoop and curl."
+		"wolfUiNext": {
+			"description": "A drop-in replacement for the launcher of the Wolf game-streaming server, written in Rust with Dioxus. It talks to Wolf over a Unix socket using API types generated from Wolf's OpenAPI schema, works with a gamepad, keyboard, mouse or touch, and ships as Debian and Fedora container images built in GitHub Actions."
 		},
 		"homelab": {
-			"description": "Home infrastructure on two servers (Proxmox + TrueNAS) that I use daily. Services include media streaming, local cloud gaming with GPU passthrough, local AI models, and automatic reverse proxy and DNS. Everything managed as Infrastructure as Code."
+			"description": "Infrastructure as code for a multi-node Proxmox and TrueNAS homelab with 21 Docker stacks, deployed by Komodo on every push. Traefik with traefik-kop routes traffic to containers across nodes, split DNS serves the LAN, and outside access goes through Cloudflare Tunnel and Tailscale with no open ports. The homelab also hosts my AI setup: an LLM gateway that routes my coding tools and CI agents across several model providers, a llama.cpp server on a local GPU and a remote T3 Code server."
+		},
+		"slopBlast": {
+			"description": "A block puzzle PWA with offline guest play, passkey accounts, friends and daily leaderboards. The server verifies every ranked score by replaying the run from its seed, and CI runs unit, cross-browser Playwright and container smoke tests before each release."
+		},
+		"gowCollection": {
+			"description": "Container images for the Wolf game-streaming server, including a SteamOS-style desktop, a WiVRn VR streaming server and the Eden emulator. The GitHub Actions pipeline rebuilds only the images a change touches, smoke-tests each one, publishes preview images for pull requests and applies dependency updates to every app each week."
+		},
+		"auchanCli": {
+			"description": "A command-line client for grocery shopping at Auchan, designed for AI agents to drive: search, cart, delivery slots and checkout. Commands can run in batches in one headless browser session, output is machine-readable, and placing an order has its own safeguards."
 		},
 		"hydroHomie": {
-			"description": "Hydroponics controller on ESP32-C6 with a custom PCB designed using code. Soil moisture, water level and temperature sensors. Dynamic deep sleep for battery savings, Home Assistant integration via ESPHome."
+			"description": "Battery-powered hydroponics controller from my engineering thesis, still in development. The ESP32-C6 runs ESPHome firmware with adaptive deep sleep, sensor power gating and pump safety limits. The PCB is designed as code in atopile, and CI builds the manufacturing files."
 		},
-		"resumeTemplate": {
-			"description": "A repository serving as a template for creating resumes using MarkDown. This resume was built using this template."
+		"resume": {
+			"description": "This resume: a bilingual SvelteKit site that builds its own PDFs. One layout renders both the web page and the print version, a custom paginator packs it onto A4 sheets, and Playwright prints each language in light and dark themes. The web version adds an ASCII canvas background and a hidden terminal."
 		}
 	},
 	"technologiesUsed": "Technologies used:",
-	"openSource": "I actively contribute to open source projects I use — including Streamystats (Jellyfin analytics), ZeroClaw (AI agent) and Wolf (cloud gaming in Docker).",
+	"openSource": "I contribute fixes and features to open-source projects I use, including Wolf (Games on Whales), Streamystats, ZeroClaw, decluttarr and jellysweep.",
 	"education": {
 		"dsw": {
-			"school": "DSW University in Wroclaw",
-			"field": "Computer Science, spec. Game Development (B.Eng.)",
-			"period": "2022 - 2026"
+			"school": "DSW University of Lower Silesia, Wrocław",
+			"field": "B.Eng. in Computer Science, Game Development specialization",
+			"period": "2022 – 2026",
+			"thesis": "Thesis: design and implementation of a smart home automation system using microcontrollers and ESPHome"
 		},
 		"technikum": {
-			"school": "Mechatronics Technical School No. 1 in Warsaw",
-			"field": "IT Technician",
-			"period": "2018 - 2022"
+			"school": "Mechatronics Technical School No. 1, Warsaw",
+			"field": "IT technician",
+			"period": "2018 – 2022"
 		}
 	},
 	"spokenLanguages": {
-		"polish": "Polish (Native)",
+		"polish": "Polish (native)",
 		"english": "English (C2)",
 		"german": "German (A1)"
 	},
