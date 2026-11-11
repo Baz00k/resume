@@ -1,8 +1,8 @@
 // The resume as one ordered list of blocks, rendered by `ResumeBlock.svelte`. The web
 // page shows them as one continuous column, the print route packs them onto A4 sheets.
-// Steer page breaks with `keepWithNext` / `breakBefore` here; the web page ignores them.
+// Steer page breaks with `keepWithNext` here; the web page ignores it.
 import type { Messages } from '#lib/i18n.ts';
-import type { Block } from '#lib/print/paginate.ts';
+import type { Block } from '#lib/sheet.ts';
 import { education, experience, projects, skillGroups } from '#lib/resume.ts';
 
 export type ResumeBlock = Block &

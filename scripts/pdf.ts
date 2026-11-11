@@ -7,13 +7,8 @@ import { chromium } from 'playwright';
 import { preview } from 'vite';
 import { baseLocale, locales } from '#lib/i18n.ts';
 import { pdfPath } from '#lib/pdf.ts';
-import type { SheetReport } from '#lib/print/paginate.ts';
+import { parseSheetReport, reportAttribute, sheetIssues } from '#lib/sheet.ts';
 import { themes } from '#lib/theme.ts';
-
-// A sheet this empty usually means a large block was pushed to the next page.
-const minFill = 0.7;
-// The last sheet only needs to be worth printing.
-const minLastFill = 0.2;
 
 const ci = Boolean(process.env.GITHUB_ACTIONS);
 const warn = (message: string) => console.warn(ci ? `::warning::${message}` : `⚠ ${message}`);
@@ -34,10 +29,8 @@ try {
 			const page = await browser.newPage();
 			await page.emulateMedia({ media: 'print', colorScheme: theme });
 			await page.goto(new URL(route, origin).href);
-			const pagination = await page.waitForSelector('[data-pagination]');
-			const sheets = JSON.parse(
-				(await pagination.getAttribute('data-pagination'))!
-			) as SheetReport[];
+			const pagination = await page.waitForSelector(`[${reportAttribute}]`);
+			const sheets = parseSheetReport(await pagination.getAttribute(reportAttribute));
 
 			const file = join('build', pdfPath(locale, theme));
 			// Fonts come from Google Fonts; without them the PDF would silently use fallbacks.
@@ -49,13 +42,10 @@ try {
 			);
 			if (missingFonts.length) fail(`${file}: fonts did not load: ${missingFonts.join(', ')}`);
 
-			sheets.forEach(({ fill, overflow }, index) => {
-				const where = `${file}, page ${index + 1}/${sheets.length}`;
-				const last = index === sheets.length - 1;
-				if (overflow) fail(`${where}: content is cut off at the bottom`);
-				else if (fill < (last ? minLastFill : minFill))
-					warn(`${where}: only ${Math.round(fill * 100)}% full`);
-			});
+			for (const issue of sheetIssues(sheets)) {
+				const log = issue.level === 'error' ? fail : warn;
+				log(`${file}, page ${issue.page}/${sheets.length}: ${issue.message}`);
+			}
 
 			await mkdir(dirname(file), { recursive: true });
 			await page.pdf({
