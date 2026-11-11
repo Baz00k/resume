@@ -844,17 +844,19 @@
 		class="relative min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3 selection:bg-(--t-sel) sm:px-6"
 		onclick={focusPrompt}
 	>
-		{#each entries as entry (entry.id)}
-			<div data-entry>
-				{#if entry.command !== undefined}
-					<div class="flex gap-2">
-						{@render prompt(entry.cwd)}
-						<span class="break-all whitespace-pre-wrap">{entry.command}</span>
-					</div>
-				{/if}
-				<div class="mb-2 empty:mb-0">{@render output(entry.output)}</div>
-			</div>
-		{/each}
+		<div role="log">
+			{#each entries as entry (entry.id)}
+				<div data-entry>
+					{#if entry.command !== undefined}
+						<div class="flex gap-2">
+							{@render prompt(entry.cwd)}
+							<span class="break-all whitespace-pre-wrap">{entry.command}</span>
+						</div>
+					{/if}
+					<div class="mb-2 empty:mb-0">{@render output(entry.output)}</div>
+				</div>
+			{/each}
+		</div>
 
 		<label class="relative flex gap-2">
 			{@render prompt(cwd)}

@@ -17,6 +17,14 @@ export default defineConfig({
 			// No fallback page: every route is prerendered.
 			adapter: adapter({ pages: 'build', assets: 'build' })
 		}),
-		Icons({ compiler: 'svelte', scale: 1, defaultClass: 'iconify' })
+		Icons({
+			compiler: 'svelte',
+			scale: 1,
+			defaultClass: 'iconify',
+			// All icons are decorative: next to text or inside a labelled control.
+			iconCustomizer: (_collection, _icon, props) => {
+				props['aria-hidden'] = 'true';
+			}
+		})
 	]
 });

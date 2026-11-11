@@ -3,7 +3,7 @@
 	import Header from '#lib/components/Header.svelte';
 	import { baseLocale, localeParam, locales, type Locale } from '#lib/i18n.ts';
 	import profile from '#lib/images/profile.jpg';
-	import { contact, siteUrl } from '#lib/resume.ts';
+	import { contact, siteUrl, skillGroups } from '#lib/resume.ts';
 	import type { LayoutProps } from './$types';
 
 	let { data, children }: LayoutProps = $props();
@@ -24,16 +24,22 @@
 	const person = $derived(
 		JSON.stringify({
 			'@context': 'https://schema.org',
-			'@type': 'Person',
-			name: 'Jakub Buzuk',
-			jobTitle: data.m.headline,
-			description: data.m.description,
+			'@type': 'ProfilePage',
 			url,
-			image: new URL(profile, siteUrl).href,
-			sameAs: contact
-				.map((link) => link.href)
-				.filter((href) => href.startsWith('https://') && href !== siteUrl),
-			alumniOf: { '@type': 'CollegeOrUniversity', name: data.m.education.dsw.school }
+			inLanguage: data.locale,
+			mainEntity: {
+				'@type': 'Person',
+				name: 'Jakub Buzuk',
+				jobTitle: data.m.headline,
+				description: data.m.description,
+				url: pageUrl(baseLocale),
+				image: new URL(profile, siteUrl).href,
+				sameAs: contact
+					.map((link) => link.href)
+					.filter((href) => href.startsWith('https://') && href !== siteUrl),
+				alumniOf: { '@type': 'CollegeOrUniversity', name: data.m.education.dsw.school },
+				knowsAbout: skillGroups.flatMap((group) => group.skills.map((skill) => skill.name))
+			}
 		}).replaceAll('<', '\\u003c')
 	);
 	const structuredData = $derived(`<script type="application/ld+json">${person}<${'/'}script>`);
