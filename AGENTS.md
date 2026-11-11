@@ -8,6 +8,7 @@ Scripts live in `package.json`; run `pnpm check` and `pnpm lint` before finishin
 
 - `messages/{pl,en}.json` hold translatable text only, keyed by stable ids. `pl` is the base locale and defines the shape; `src/lib/i18n.ts` type-checks `en` against it.
 - Layout data (links, icons, years, proper nouns) lives in `src/lib/resume.ts`. The order of the resume and its page-break hints live in `src/lib/blocks.ts`; `src/lib/components/ResumeBlock.svelte` renders each block for both the web page and the PDF, so there is one layout to edit.
+- Page metadata (title, description, canonical and hreflang links, Open Graph, schema.org `Person`) is set in `(site)/+layout.svelte` from the dictionaries and `siteUrl` in `resume.ts`. `static/og.png` is the link-preview image; `static/sitemap.xml` lists the locale URLs by hand, so update it when adding a locale.
 - Routes: `src/routes/[[lang=lang]]/`. `pl` is served at `/`, other locales under `/<locale>/`; `entries()` in each `+page.ts` prerenders them. `(site)/` shows the blocks as one continuous sheet, `print/` packs them onto A4 sheets for the PDFs.
 
 ## PDF

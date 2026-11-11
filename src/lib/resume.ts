@@ -203,9 +203,12 @@ export const spokenLanguages: { id: keyof Messages['spokenLanguages']; icon: Ico
 	{ id: 'german', icon: FlagGermany }
 ];
 
+/** Where the site is deployed; absolute links for previews and search engines start here. */
+export const siteUrl = 'https://buzuk.dev';
+
 export const contact: { icon: Icon; href: string }[] = [
 	{ icon: Email, href: 'mailto:jakub@buzuk.dev' },
 	{ icon: LinkedIn, href: 'https://www.linkedin.com/in/jakub-buzuk' },
 	{ icon: GitHubMark, href: 'https://github.com/Baz00k' },
-	{ icon: Web, href: 'https://buzuk.dev' }
+	{ icon: Web, href: siteUrl }
 ];
