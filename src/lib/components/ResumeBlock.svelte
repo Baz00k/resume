@@ -21,7 +21,11 @@
 	<div class="mb-[0.8mm] flex flex-wrap items-baseline justify-between gap-x-4">
 		<h3 class="text-[10.5pt] font-semibold text-heading">{title}</h3>
 		{#if href}
-			<a {href} class="text-[8.5pt] text-muted hover:underline">{aside}</a>
+			<a
+				{href}
+				class="text-[8.5pt] text-muted underline-offset-[0.2em] hover:underline focus-visible:underline"
+				>{aside}</a
+			>
 		{:else if aside}
 			<span class="text-[8.5pt] text-muted tabular-nums">{aside}</span>
 		{/if}
@@ -46,7 +50,11 @@
 				{#each contact as link (link.href)}
 					<li class="flex items-center gap-[1.2mm]">
 						<link.icon class="text-muted" />
-						<a href={link.href} class="text-ink hover:underline">{display(link.href)}</a>
+						<a
+							href={link.href}
+							class="text-muted underline-offset-[0.2em] hover:underline focus-visible:underline"
+							>{display(link.href)}</a
+						>
 					</li>
 				{/each}
 			</ul>
@@ -79,11 +87,16 @@
 {:else if block.kind === 'job'}
 	{@const text = m.experience[block.job.id]}
 	{@render entryTitle(text.name, text.period)}
-	<p class="text-[9pt]">
+	<!-- Flex items, so the link is not in running text: links have no underline at rest (WCAG 1.4.1). -->
+	<p class="flex flex-wrap items-baseline gap-x-[0.3em] text-[9pt]">
 		<span class="font-medium text-accent italic">{text.role}</span>
 		{#if block.job.url}
 			<span class="text-muted">·</span>
-			<a href={block.job.url} class="text-muted hover:underline">{display(block.job.url)}</a>
+			<a
+				href={block.job.url}
+				class="text-muted underline-offset-[0.2em] hover:underline focus-visible:underline"
+				>{display(block.job.url)}</a
+			>
 		{/if}
 	</p>
 	<p class="mt-[1mm]">{text.description}</p>

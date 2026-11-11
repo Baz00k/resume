@@ -21,6 +21,7 @@
 	{href}
 	rel="external"
 	download={dev ? undefined : pdfFileName(locale)}
+	aria-label={m.ui.downloadPdf}
 	title={m.ui.downloadPdf}
 	class="flex items-center justify-center gap-2 rounded-full bg-gray-200 px-4 py-2 transition-colors duration-300 ease-in-out hover:bg-gray-300 dark:bg-gray-100/10 dark:hover:bg-gray-100/20"
 >

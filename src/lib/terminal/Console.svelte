@@ -156,9 +156,7 @@
 
 <svelte:window {onkeydown} />
 
-<p
-	class="hint mt-6 text-center font-mono text-[11px] text-muted opacity-60 transition-opacity select-none hover:opacity-100 print:hidden"
->
+<p class="hint mt-6 text-center font-mono text-[11px] text-muted select-none print:hidden">
 	{hint[0]}<kbd class="rounded border border-line px-1 font-[inherit]">`</kbd>{hint[1]}
 </p>
 
