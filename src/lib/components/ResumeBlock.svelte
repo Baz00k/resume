@@ -81,8 +81,10 @@
 	{@render entryTitle(text.name, text.period)}
 	<p class="text-[9pt]">
 		<span class="font-medium text-accent italic">{text.role}</span>
-		<span class="text-muted">·</span>
-		<a href={block.job.url} class="text-muted hover:underline">{display(block.job.url)}</a>
+		{#if block.job.url}
+			<span class="text-muted">·</span>
+			<a href={block.job.url} class="text-muted hover:underline">{display(block.job.url)}</a>
+		{/if}
 	</p>
 	<p class="mt-[1mm]">{text.description}</p>
 	{#if 'highlights' in text}
@@ -107,6 +109,9 @@
 	{@const text = m.education[block.id]}
 	{@render entryTitle(text.school, text.period)}
 	<p>{text.field}</p>
+	{#if 'thesis' in text}
+		<p class="text-[9pt] text-muted">{text.thesis}</p>
+	{/if}
 {:else if block.kind === 'languages'}
 	<ul class="flex flex-wrap gap-x-[6mm]">
 		{#each spokenLanguages as language (language.id)}
