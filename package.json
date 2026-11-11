@@ -15,7 +15,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "oxfmt --check && oxlint",
-		"test": "node --test 'src/**/*.test.ts'",
+		"test": "vitest run",
+		"test:watch": "vitest",
 		"format": "oxfmt"
 	},
 	"devDependencies": {
@@ -43,7 +44,8 @@
 		"tailwindcss": "^4.3.3",
 		"typescript": "^6.0.3",
 		"unplugin-icons": "^24.0.0",
-		"vite": "^8.3.4"
+		"vite": "^8.3.4",
+		"vitest": "^5.1.0"
 	},
 	"packageManager": "pnpm@12.14.0"
 }
