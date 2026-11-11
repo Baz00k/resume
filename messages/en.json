@@ -89,6 +89,6 @@
 		"switchToLight": "Switch to light theme",
 		"downloadPdf": "Download CV as PDF",
 		"language": "Language",
-		"terminalHint": "press {key} for a terminal"
+		"terminalHint": { "before": "press ", "after": " for a terminal" }
 	}
 }

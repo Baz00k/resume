@@ -14,9 +14,6 @@
 
 	let { locale, m }: { locale: Locale; m: Messages } = $props();
 
-	/** The hint's text around the key, which it shows as a keycap. */
-	let hint = $derived(m.ui.terminalHint.split('{key}'));
-
 	type TerminalProps = {
 		locale: Locale;
 		m: Messages;
@@ -157,7 +154,8 @@
 <svelte:window {onkeydown} />
 
 <p class="hint mt-6 text-center font-mono text-[11px] text-muted select-none print:hidden">
-	{hint[0]}<kbd class="rounded border border-line px-1 font-[inherit]">`</kbd>{hint[1]}
+	{m.ui.terminalHint.before}<kbd class="rounded border border-line px-1 font-[inherit]">`</kbd>{m.ui
+		.terminalHint.after}
 </p>
 
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
