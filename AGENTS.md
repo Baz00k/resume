@@ -4,7 +4,7 @@ Jakub Buzuk's bilingual (pl, en) resume: a prerendered SvelteKit site plus build
 
 The site is a portfolio piece: impressive, yet readable as a plain resume at first glance and fast to load. The PDF stays clean and ATS-readable. Content states only real facts, with client project names anonymised.
 
-**Done** when `pnpm check` and `pnpm lint` pass, plus a warning-free `pnpm build` when the change can move content between PDF pages.
+**Done** when `pnpm check`, `pnpm lint` and `pnpm test` pass, plus a warning-free `pnpm build` when the change can move content between PDF pages.
 
 ## Rules
 
