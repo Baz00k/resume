@@ -11,7 +11,7 @@
 	import { resolve } from '$app/paths';
 	import { localeParam, locales, type Locale, type Messages } from '#lib/i18n.ts';
 	import { blocks } from '#lib/blocks.ts';
-	import { pdfFileName, pdfPath } from '#lib/pdf.ts';
+	import { pdf, pdfLink } from '#lib/pdf.ts';
 	import {
 		contact,
 		education,
@@ -224,11 +224,6 @@
 		return row[b.length]!;
 	};
 
-	const pdfHref = () =>
-		dev
-			? resolve('/[[lang=lang]]/print', { lang: localeParam(locale) })
-			: pdfPath(locale, theme.current);
-
 	/** Prints a short line, then runs `action` once the user has had a moment to read it. */
 	const after = (line: string, action: () => void): Output => {
 		setTimeout(action, reducedMotion ? 0 : 280);
@@ -287,10 +282,11 @@
 				return { type: 'text', lines: [{ text: `Opening ${display(href)}…`, tone: 'ok' }] };
 			}
 			case 'pdf': {
+				const { href, download } = pdfLink(locale, theme.current, dev);
 				const link = document.createElement('a');
-				link.href = pdfHref();
-				if (dev) link.target = '_blank';
-				else link.download = pdfFileName(locale);
+				link.href = href;
+				if (download) link.download = download;
+				else link.target = '_blank';
 				link.click();
 				return {
 					type: 'text',
@@ -298,7 +294,7 @@
 						{
 							text: dev
 								? 'Opening the print preview (PDFs exist after `pnpm build`)…'
-								: `Downloading ${pdfFileName(locale)}…`,
+								: `Downloading ${pdf(locale, theme.current).downloadName}…`,
 							tone: 'ok'
 						}
 					]
