@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import Header from '#lib/components/Header.svelte';
-	import { baseLocale, localeParam, locales, type Locale } from '#lib/i18n.ts';
+	import { baseLocale, localePath, locales, posixLocale, type Locale } from '#lib/i18n.ts';
 	import profile from '#lib/images/profile.jpg';
 	import { contact, siteUrl, skillGroups } from '#lib/resume.ts';
 	import type { LayoutProps } from './$types';
@@ -9,12 +8,7 @@
 	let { data, children }: LayoutProps = $props();
 
 	// Link previews and search engines need absolute URLs, with the trailing slash the pages are served at.
-	const pageUrl = (locale: Locale) =>
-		new URL(resolve('/[[lang=lang]]/(site)', { lang: localeParam(locale) }), siteUrl).href.replace(
-			/\/?$/,
-			'/'
-		);
-	const ogLocale: Record<Locale, string> = { pl: 'pl_PL', en: 'en_US' };
+	const pageUrl = (locale: Locale) => new URL(localePath(locale), siteUrl).href;
 	const image = new URL('/og.png', siteUrl).href;
 
 	const title = $derived(`Jakub Buzuk · ${data.m.headline}`);
@@ -59,9 +53,9 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={data.m.description} />
 	<meta property="og:url" content={url} />
-	<meta property="og:locale" content={ogLocale[data.locale]} />
+	<meta property="og:locale" content={posixLocale[data.locale]} />
 	{#each locales.filter((locale) => locale !== data.locale) as locale (locale)}
-		<meta property="og:locale:alternate" content={ogLocale[locale]} />
+		<meta property="og:locale:alternate" content={posixLocale[locale]} />
 	{/each}
 	<meta property="og:image" content={image} />
 	<meta property="og:image:width" content="1200" />

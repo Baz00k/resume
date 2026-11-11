@@ -9,6 +9,6 @@ The site is a portfolio piece: impressive, yet readable as a plain resume at fir
 ## Rules
 
 - `messages/*.json` hold translatable text only; layout data and page-break hints live in `src/lib/`.
-- Adding a locale also means adding it to `static/sitemap.xml`.
+- Locales are declared once in `src/lib/i18n.ts`: a `messages/<locale>.json` plus that locale's entries in the records there, which the type checker requires.
 - The terminal easter egg's own strings stay English in every locale.
 - Stay on TypeScript 6.

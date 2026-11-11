@@ -9,7 +9,14 @@
 	import { onMount, tick } from 'svelte';
 	import { dev } from '$app/env';
 	import { resolve } from '$app/paths';
-	import { localeParam, locales, type Locale, type Messages } from '#lib/i18n.ts';
+	import {
+		localeParam,
+		localePath,
+		locales,
+		posixLocale,
+		type Locale,
+		type Messages
+	} from '#lib/i18n.ts';
 	import { blocks } from '#lib/blocks.ts';
 	import { pdfFileName, pdfPath } from '#lib/pdf.ts';
 	import {
@@ -315,9 +322,7 @@
 				if (!locales.includes(value as Locale)) return error(`lang: use ${locales.join(' or ')}`);
 				// Full reload so the prerendered page sets the matching <html lang>; the console reopens.
 				sessionStorage.setItem(reopenKey, '1');
-				window.location.href = resolve('/[[lang=lang]]/(site)', {
-					lang: localeParam(value as Locale)
-				});
+				window.location.href = localePath(value as Locale);
 				return { type: 'text', lines: [{ text: `Switching to ${value}…`, tone: 'ok' }] };
 			}
 			case 'gui':
@@ -771,7 +776,7 @@
 							?.slice(0, 6)
 							.join(', ')], ['Frontend', groups.frontend
 							?.slice(0, 5)
-							.join(', ')], ['Backend', groups.backend?.join(', ')], ['AI', groups.ai?.join(', ')], ['OS', 'Linux'], ['Shell', 'Bash/Zsh'], ['Locale', locale === 'pl' ? 'pl_PL.UTF-8' : 'en_US.UTF-8'], ['Theme', theme.current === 'dark' ? 'Geist Dark' : 'Geist Light']] as [key, value] (key)}
+							.join(', ')], ['Backend', groups.backend?.join(', ')], ['AI', groups.ai?.join(', ')], ['OS', 'Linux'], ['Shell', 'Bash/Zsh'], ['Locale', `${posixLocale[locale]}.UTF-8`], ['Theme', theme.current === 'dark' ? 'Geist Dark' : 'Geist Light']] as [key, value] (key)}
 					<div><span class="font-bold text-(--t-blue)">{key}</span>: {value}</div>
 				{/each}
 				<div class="mt-2 flex">
