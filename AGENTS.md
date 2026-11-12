@@ -12,3 +12,4 @@ The site is a portfolio piece: impressive, yet readable as a plain resume at fir
 - Locales are declared once in `src/lib/i18n.ts`: a `messages/<locale>.json` plus that locale's entries in the records there, which the type checker requires.
 - The terminal easter egg's own strings stay English in every locale.
 - Stay on TypeScript 6.
+- Node and pnpm versions are pinned in `mise.toml`, which CI installs too; keep pnpm in step with `packageManager`.
