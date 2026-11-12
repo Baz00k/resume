@@ -46,16 +46,16 @@
 			"description": "Bezpośredni zamiennik launchera serwera do streamingu gier Wolf, napisany w Rust z użyciem Dioxus. Z serwerem Wolf komunikuje się przez Unix socket, korzystając z typów API generowanych z jego schematu OpenAPI. Można nim sterować padem, klawiaturą, myszą lub dotykiem, a obrazy kontenerów w wariantach Debian i Fedora buduje GitHub Actions."
 		},
 		"homelab": {
-			"description": "Infrastruktura jako kod dla kilkuwęzłowego homelabu na Proxmox i TrueNAS z 21 stackami Docker Compose, które Komodo wdraża po każdym pushu. Traefik z traefik-kop kieruje ruch do kontenerów na wszystkich węzłach, w sieci lokalnej działa split DNS, a dostęp z zewnątrz zapewniają Cloudflare Tunnel i Tailscale, bez otwartych portów. Działa tu też moje środowisko AI: gateway LLM, który rozdziela ruch narzędzi do kodowania i agentów w CI między kilku dostawców modeli, serwer llama.cpp na lokalnym GPU i zdalny serwer T3 Code."
+			"description": "Infrastruktura jako kod dla kilkuwęzłowego homelabu na Proxmox i TrueNAS z ponad 20 stackami Docker Compose, które Komodo wdraża po każdym pushu. Traefik z traefik-kop kieruje ruch do kontenerów na wszystkich węzłach, w sieci lokalnej działa split DNS, a dostęp z zewnątrz zapewniają Cloudflare Tunnel i Tailscale, bez otwartych portów. Działa tu też zdalny serwer deweloperski w kontenerze LXC z Linuksem, gateway LLM, który rozdziela ruch narzędzi do kodowania i agentów w CI między kilku dostawców modeli, oraz serwer llama.cpp na lokalnym GPU."
 		},
 		"slopBlast": {
-			"description": "Gra logiczna z klockami w formie PWA z trybem gościa offline, kontami opartymi na passkeys, znajomymi i dziennymi rankingami. Serwer weryfikuje każdy wynik w rankingu, odtwarzając rozgrywkę na podstawie ziarna losowania, a przed każdym wydaniem CI uruchamia testy jednostkowe, testy Playwright w kilku przeglądarkach i smoke testy kontenera."
+			"description": "Gra logiczna z klockami w formie PWA z trybem gościa offline, kontami opartymi na passkeys, znajomymi i dziennymi rankingami. Serwer weryfikuje każdy wynik w rankingu, odtwarzając rozgrywkę na podstawie ziarna losowania. Przed każdym wydaniem CI uruchamia testy jednostkowe, testy Playwright w kilku przeglądarkach i smoke testy kontenera."
 		},
 		"gowCollection": {
 			"description": "Obrazy kontenerów dla serwera do streamingu gier Wolf, m.in. pulpit w stylu SteamOS, serwer WiVRn do streamingu VR i emulator Eden. Pipeline w GitHub Actions przebudowuje tylko obrazy, których dotyczy zmiana, uruchamia smoke testy każdego z nich, publikuje obrazy podglądowe dla pull requestów i co tydzień aktualizuje zależności we wszystkich aplikacjach."
 		},
 		"auchanCli": {
-			"description": "Klient wiersza poleceń do zakupów spożywczych w Auchan, zaprojektowany do obsługi przez agentów AI: wyszukiwanie, koszyk, terminy dostaw i finalizacja zamówienia. Polecenia można wykonywać wsadowo w jednej sesji przeglądarki headless, dane wyjściowe są czytelne dla maszyn, a składanie zamówienia ma własne zabezpieczenia."
+			"description": "Klient wiersza poleceń do zakupów spożywczych w Auchan, zaprojektowany do obsługi przez agentów AI: wyszukiwanie, koszyk, terminy dostaw i finalizacja zamówienia. Polecenia można wykonywać wsadowo w jednej sesji przeglądarki headless, dane wyjściowe są dostosowane do odczytu przez agentów, a składanie zamówienia ma własne zabezpieczenia."
 		},
 		"hydroHomie": {
 			"description": "Zasilany z baterii kontroler hydroponiki z mojej pracy inżynierskiej, wciąż w rozwoju. ESP32-C6 działa na firmware ESPHome z adaptacyjnym trybem deep sleep, odcinaniem zasilania czujników i limitami bezpieczeństwa pompy. PCB jest projektowane jako kod w atopile, a pliki produkcyjne buduje CI."

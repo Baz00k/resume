@@ -46,16 +46,16 @@
 			"description": "A drop-in replacement for the launcher of the Wolf game-streaming server, written in Rust with Dioxus. It talks to Wolf over a Unix socket using API types generated from Wolf's OpenAPI schema, works with a gamepad, keyboard, mouse or touch, and ships as Debian and Fedora container images built in GitHub Actions."
 		},
 		"homelab": {
-			"description": "Infrastructure as code for a multi-node Proxmox and TrueNAS homelab with 21 Docker stacks, deployed by Komodo on every push. Traefik with traefik-kop routes traffic to containers across nodes, split DNS serves the LAN, and outside access goes through Cloudflare Tunnel and Tailscale with no open ports. The homelab also hosts my AI setup: an LLM gateway that routes my coding tools and CI agents across several model providers, a llama.cpp server on a local GPU and a remote T3 Code server."
+			"description": "Infrastructure as code for a multi-node Proxmox and TrueNAS homelab with more than 20 Docker stacks, deployed by Komodo on every push. Traefik with traefik-kop routes traffic to containers across nodes, split DNS serves the LAN, and outside access goes through Cloudflare Tunnel and Tailscale with no open ports. The homelab also hosts a remote dev server in a Linux LXC, an LLM gateway that routes my coding tools and CI agents across several model providers and a llama.cpp server on a local GPU."
 		},
 		"slopBlast": {
-			"description": "A block puzzle PWA with offline guest play, passkey accounts, friends and daily leaderboards. The server verifies every ranked score by replaying the run from its seed, and CI runs unit, cross-browser Playwright and container smoke tests before each release."
+			"description": "A block puzzle PWA with offline guest play, passkey accounts, friends and daily leaderboards. The server verifies every ranked score by replaying the run from its seed. CI runs unit, cross-browser Playwright and container smoke tests before each release."
 		},
 		"gowCollection": {
 			"description": "Container images for the Wolf game-streaming server, including a SteamOS-style desktop, a WiVRn VR streaming server and the Eden emulator. The GitHub Actions pipeline rebuilds only the images a change touches, smoke-tests each one, publishes preview images for pull requests and applies dependency updates to every app each week."
 		},
 		"auchanCli": {
-			"description": "A command-line client for grocery shopping at Auchan, designed for AI agents to drive: search, cart, delivery slots and checkout. Commands can run in batches in one headless browser session, output is machine-readable, and placing an order has its own safeguards."
+			"description": "A command-line client for grocery shopping at Auchan, designed for AI agents to drive: search, cart, delivery slots and checkout. Commands can run in batches in one headless browser session, output is shaped for agents to read, and placing an order has its own safeguards."
 		},
 		"hydroHomie": {
 			"description": "Battery-powered hydroponics controller from my engineering thesis, still in development. The ESP32-C6 runs ESPHome firmware with adaptive deep sleep, sensor power gating and pump safety limits. The PCB is designed as code in atopile, and CI builds the manufacturing files."
