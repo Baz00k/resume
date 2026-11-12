@@ -8,15 +8,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import { dev } from '$app/env';
-	import { resolve } from '$app/paths';
-	import {
-		localeParam,
-		localePath,
-		locales,
-		posixLocale,
-		type Locale,
-		type Messages
-	} from '#lib/i18n.ts';
+	import { localePath, locales, posixLocale, type Locale, type Messages } from '#lib/i18n.ts';
 	import { blocks } from '#lib/blocks.ts';
 	import { pdf, pdfLink } from '#lib/pdf.ts';
 	import {
