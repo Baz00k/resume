@@ -518,9 +518,12 @@
 			draw(now);
 		};
 
+		// Repaint in the same task as the theme change, so the canvas is never captured blank by
+		// the theme's view transition (the loop may skip a frame).
 		const observer = new MutationObserver(() => {
 			buildAtlas();
 			if (reduced) renderStatic();
+			else draw(performance.now());
 		});
 		observer.observe(document.documentElement, { attributeFilter: ['data-theme'] });
 

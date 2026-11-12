@@ -16,7 +16,7 @@
 	<button
 		type="button"
 		popovertarget={id}
-		class="group flex cursor-pointer items-center gap-2 rounded-full bg-gray-200 py-2 pr-3 pl-4 capitalize transition-colors duration-300 ease-in-out [anchor-name:--language] hover:bg-gray-300 dark:bg-gray-100/10 dark:hover:bg-gray-100/20"
+		class="group flex cursor-pointer items-center gap-2 rounded-full bg-gray-200/80 py-2 pr-3 pl-4 capitalize backdrop-blur-sm transition-colors duration-300 ease-in-out [anchor-name:--language] hover:bg-gray-300/80 dark:bg-gray-100/10 dark:hover:bg-gray-100/20"
 	>
 		<Translate class="size-5" />
 		<span><span class="sr-only">{m.ui.language}: </span>{autonym(locale)}</span>
