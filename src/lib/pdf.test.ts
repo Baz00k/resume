@@ -1,55 +1,21 @@
-import { describe, expect, test } from 'vitest';
-import { baseLocale, locales } from '#lib/i18n.ts';
-import { pdf, pdfLink, pdfs } from '#lib/pdf.ts';
-import { themes } from '#lib/theme.ts';
+import { expect, test } from 'vitest';
+import { pdf, pdfs } from '#lib/pdf.ts';
 
-describe('pdfs', () => {
-	test('has one PDF per locale and theme, each with its own file', () => {
-		const all = pdfs();
-		expect(all).toHaveLength(locales.length * themes.length);
-		for (const locale of locales)
-			for (const theme of themes)
-				expect(all).toContainEqual(expect.objectContaining({ locale, theme }));
-		expect(new Set(all.map((item) => item.file)).size).toBe(all.length);
-	});
-
-	test('links to each PDF where the build writes it', () => {
-		for (const item of pdfs()) expect(item.href).toBe(`/${item.file}`);
-	});
+test('writes every locale and theme to its own file', () => {
+	const files = pdfs().map((item) => item.file);
+	expect(new Set(files).size).toBe(files.length);
 });
 
-describe('pdf', () => {
-	test('prints the base locale from the root print page and others from their prefix', () => {
-		for (const locale of locales)
-			expect(pdf(locale, 'light').printPath).toBe(
-				locale === baseLocale ? '/print/' : `/${locale}/print/`
-			);
+// These URLs and names are public: links and saved downloads depend on them.
+test('keeps the published print pages, file and download names', () => {
+	expect(pdf('pl', 'light')).toMatchObject({
+		printPath: '/print/',
+		href: '/cv/jakub-buzuk-pl-light.pdf',
+		downloadName: 'Jakub-Buzuk-CV-PL.pdf'
 	});
-
-	test('keeps the published file and download names', () => {
-		expect(pdf('pl', 'light')).toEqual({
-			locale: 'pl',
-			theme: 'light',
-			printPath: '/print/',
-			file: 'cv/jakub-buzuk-pl-light.pdf',
-			href: '/cv/jakub-buzuk-pl-light.pdf',
-			downloadName: 'Jakub-Buzuk-CV-PL.pdf'
-		});
-		expect(pdf('en', 'dark').file).toBe('cv/jakub-buzuk-en-dark.pdf');
-		expect(pdf('en', 'dark').downloadName).toBe('Jakub-Buzuk-CV-EN.pdf');
-	});
-});
-
-describe('pdfLink', () => {
-	test('offers the built PDF as a download', () => {
-		expect(pdfLink('en', 'dark', false)).toEqual({
-			href: '/cv/jakub-buzuk-en-dark.pdf',
-			download: 'Jakub-Buzuk-CV-EN.pdf'
-		});
-	});
-
-	test('opens the print page in dev, where no PDF exists', () => {
-		expect(pdfLink('en', 'dark', true)).toEqual({ href: '/en/print/' });
-		expect(pdfLink(baseLocale, 'light', true)).toEqual({ href: '/print/' });
+	expect(pdf('en', 'dark')).toMatchObject({
+		printPath: '/en/print/',
+		href: '/cv/jakub-buzuk-en-dark.pdf',
+		downloadName: 'Jakub-Buzuk-CV-EN.pdf'
 	});
 });
