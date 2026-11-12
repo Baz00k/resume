@@ -46,7 +46,7 @@
 			"description": "A drop-in replacement for the launcher of the Wolf game-streaming server, written in Rust with Dioxus. It talks to Wolf over a Unix socket using API types generated from Wolf's OpenAPI schema, works with a gamepad, keyboard, mouse or touch, and ships as Debian and Fedora container images built in GitHub Actions."
 		},
 		"homelab": {
-			"description": "Infrastructure as code for a multi-node Proxmox and TrueNAS homelab with more than 20 Docker stacks, deployed by Komodo on every push. Traefik with traefik-kop routes traffic to containers across nodes, split DNS serves the LAN, and outside access goes through Cloudflare Tunnel and Tailscale with no open ports. The homelab also hosts my AI setup: an LLM gateway that routes my coding tools and CI agents across several model providers, a llama.cpp server on a local GPU and a remote T3 Code server."
+			"description": "Infrastructure as code for a multi-node Proxmox and TrueNAS homelab with more than 20 Docker stacks, deployed by Komodo on every push. Traefik with traefik-kop routes traffic to containers across nodes, split DNS serves the LAN, and outside access goes through Cloudflare Tunnel and Tailscale with no open ports. The homelab also hosts a remote dev server in a Linux LXC, an LLM gateway that routes my coding tools and CI agents across several model providers and a llama.cpp server on a local GPU."
 		},
 		"slopBlast": {
 			"description": "A block puzzle PWA with offline guest play, passkey accounts, friends and daily leaderboards. The server verifies every ranked score by replaying the run from its seed, and CI runs unit, cross-browser Playwright and container smoke tests before each release."
