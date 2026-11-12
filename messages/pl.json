@@ -43,7 +43,7 @@
 	},
 	"projects": {
 		"wolfUiNext": {
-			"description": "Bezpośredni zamiennik launchera serwera do streamingu gier Wolf, napisany w Rust z użyciem Dioxus. Z serwerem Wolf komunikuje się przez gniazdo uniksowe, korzystając z typów API generowanych z jego schematu OpenAPI. Można nim sterować padem, klawiaturą, myszą lub dotykiem, a obrazy kontenerów w wariantach Debian i Fedora buduje GitHub Actions."
+			"description": "Bezpośredni zamiennik launchera serwera do streamingu gier Wolf, napisany w Rust z użyciem Dioxus. Z serwerem Wolf komunikuje się przez Unix socket, korzystając z typów API generowanych z jego schematu OpenAPI. Można nim sterować padem, klawiaturą, myszą lub dotykiem, a obrazy kontenerów w wariantach Debian i Fedora buduje GitHub Actions."
 		},
 		"homelab": {
 			"description": "Infrastruktura jako kod dla kilkuwęzłowego homelabu na Proxmox i TrueNAS z 21 stackami Docker Compose, które Komodo wdraża po każdym pushu. Traefik z traefik-kop kieruje ruch do kontenerów na wszystkich węzłach, w sieci lokalnej działa split DNS, a dostęp z zewnątrz zapewniają Cloudflare Tunnel i Tailscale, bez otwartych portów. Działa tu też moje środowisko AI: gateway LLM, który rozdziela ruch narzędzi do kodowania i agentów w CI między kilku dostawców modeli, serwer llama.cpp na lokalnym GPU i zdalny serwer T3 Code."
