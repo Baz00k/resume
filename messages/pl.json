@@ -55,7 +55,7 @@
 			"description": "Obrazy kontenerów dla serwera do streamingu gier Wolf, m.in. pulpit w stylu SteamOS, serwer WiVRn do streamingu VR i emulator Eden. Pipeline w GitHub Actions przebudowuje tylko obrazy, których dotyczy zmiana, uruchamia smoke testy każdego z nich, publikuje obrazy podglądowe dla pull requestów i co tydzień aktualizuje zależności we wszystkich aplikacjach."
 		},
 		"auchanCli": {
-			"description": "Klient wiersza poleceń do zakupów spożywczych w Auchan, zaprojektowany do obsługi przez agentów AI: wyszukiwanie, koszyk, terminy dostaw i finalizacja zamówienia. Polecenia można wykonywać wsadowo w jednej sesji przeglądarki headless, dane wyjściowe są czytelne dla maszyn, a składanie zamówienia ma własne zabezpieczenia."
+			"description": "Klient wiersza poleceń do zakupów spożywczych w Auchan, zaprojektowany do obsługi przez agentów AI: wyszukiwanie, koszyk, terminy dostaw i finalizacja zamówienia. Polecenia można wykonywać wsadowo w jednej sesji przeglądarki headless, dane wyjściowe są dostosowane do odczytu przez agentów, a składanie zamówienia ma własne zabezpieczenia."
 		},
 		"hydroHomie": {
 			"description": "Zasilany z baterii kontroler hydroponiki z mojej pracy inżynierskiej, wciąż w rozwoju. ESP32-C6 działa na firmware ESPHome z adaptacyjnym trybem deep sleep, odcinaniem zasilania czujników i limitami bezpieczeństwa pompy. PCB jest projektowane jako kod w atopile, a pliki produkcyjne buduje CI."

@@ -55,7 +55,7 @@
 			"description": "Container images for the Wolf game-streaming server, including a SteamOS-style desktop, a WiVRn VR streaming server and the Eden emulator. The GitHub Actions pipeline rebuilds only the images a change touches, smoke-tests each one, publishes preview images for pull requests and applies dependency updates to every app each week."
 		},
 		"auchanCli": {
-			"description": "A command-line client for grocery shopping at Auchan, designed for AI agents to drive: search, cart, delivery slots and checkout. Commands can run in batches in one headless browser session, output is machine-readable, and placing an order has its own safeguards."
+			"description": "A command-line client for grocery shopping at Auchan, designed for AI agents to drive: search, cart, delivery slots and checkout. Commands can run in batches in one headless browser session, output is shaped for agents to read, and placing an order has its own safeguards."
 		},
 		"hydroHomie": {
 			"description": "Battery-powered hydroponics controller from my engineering thesis, still in development. The ESP32-C6 runs ESPHome firmware with adaptive deep sleep, sensor power gating and pump safety limits. The PCB is designed as code in atopile, and CI builds the manufacturing files."
