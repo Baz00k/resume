@@ -12,8 +12,18 @@ export const theme = {
 		current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
 	},
 	set(value: Theme) {
-		current = value;
-		document.documentElement.dataset.theme = value;
+		const apply = () => {
+			current = value;
+			document.documentElement.dataset.theme = value;
+		};
+		// One crossfade of the whole page, so the ASCII canvas (which repaints at once) and the
+		// CSS colours switch together. Without view transitions, or with reduced motion, it's instant.
+		if (
+			'startViewTransition' in document &&
+			!matchMedia('(prefers-reduced-motion: reduce)').matches
+		) {
+			document.startViewTransition(apply);
+		} else apply();
 		try {
 			localStorage.setItem(themeStorageKey, value);
 		} catch {

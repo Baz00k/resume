@@ -11,7 +11,7 @@
 </script>
 
 <button
-	class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-gray-200 transition-colors duration-300 ease-in-out hover:bg-gray-300 dark:bg-gray-100/10 dark:hover:bg-gray-100/20"
+	class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-gray-200/80 backdrop-blur-sm transition-colors duration-300 ease-in-out hover:bg-gray-300/80 dark:bg-gray-100/10 dark:hover:bg-gray-100/20"
 	aria-label={next === 'dark' ? m.ui.switchToDark : m.ui.switchToLight}
 	title={next === 'dark' ? m.ui.switchToDark : m.ui.switchToLight}
 	onclick={() => theme.set(next)}
