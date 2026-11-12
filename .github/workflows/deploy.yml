@@ -17,14 +17,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v6
-        name: Install pnpm
+      # Node and pnpm versions come from mise.toml.
+      - name: Install tools
+        uses: jdx/mise-action@v5
 
-      - name: Install Node.js
-        uses: actions/setup-node@v7
+      - name: Cache pnpm store
+        uses: actions/cache@v6
         with:
-          node-version: 24
-          cache: 'pnpm'
+          path: ~/.local/share/pnpm/store
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-store-${{ runner.os }}-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
